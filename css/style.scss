@@ -167,7 +167,7 @@
         padding: 48px 96px;
         display: flex;
         flex-direction: column;
-        gap: 48px;
+        gap: 20px;
 
         &-head {
             display: flex;
@@ -183,6 +183,10 @@
                 align-items: center;
                 gap: 8px;
             }
+        }
+
+        h3 {
+            padding-bottom: 28px;
         }
 
         .banners {
@@ -209,6 +213,22 @@
 
                 img {
                     width: 100%;
+                }
+            }
+
+            &-bottom {
+                display: flex;
+                gap: 20px;
+
+                &-block {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    width: 50%;
+
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -309,10 +329,12 @@
     }
 
     .options {
-        padding: 48px 96px;
         display: flex;
         flex-direction: column;
-        gap: 48px;
+
+        h3 {
+            padding: 48px 96px 0;
+        }
 
         .group-option {
             width: 1248px;
@@ -326,8 +348,7 @@
             gap: 16px;
             padding: 20px;
             border-radius: 20px;
-            // box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
-            border: 1px solid gray;
+            box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
             color: black;
 
             h5 {
@@ -342,10 +363,176 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 48px;
         }
 
         .swipper-pag2 {
+            display: flex !important;
+            position: relative !important;
+            height: 46px !important;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .swiper-button-next {
+            position: static;
+            margin: 0 !important;
+            border-radius: 12px;
+            background: rgb(234, 249, 250);
+            height: 46px;
+            width: 96px;
+        }
+
+        .swiper-button-prev {
+            position: static;
+            margin: 0 !important;
+            border-radius: 12px;
+            background: rgb(234, 249, 250);
+            width: 96px;
+            height: 46px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            color: rgb(79, 205, 213) !important;
+            font-size: 16px !important;
+        }
+
+        .swiper-pagination {
+            position: static;
+            width: auto !important;
+            --swiper-theme-color: rgb(79, 205, 213);
+        }
+
+        .swiper-pagination-bullet {
+            width: 12px !important;
+            height: 12px !important;
+        }
+
+        .swiper-slide {
+            padding: 48px 96px;
+            width: 87% !important;
+        }
+    }
+
+    .help {
+        padding: 48px 96px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f1f2f8;
+        gap: 24px;
+
+        h3 {
+            width: 33%;
+        }
+
+        &-card {
+            width: 33%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            gap: 16px;
+            box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
+
+
+            h5 {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 26px;
+                text-align: center;
+            }
+
+            button {
+                border-radius: 12px;
+                border: 0;
+                padding: 12px 24px;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 28px;
+                text-align: center;
+                color: white;
+            }
+
+            .input-block {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                label {
+                    color: rgba(109, 115, 122, 1);
+                }
+
+                input {
+                    background: rgba(231, 233, 235, 0.5);
+                    border-radius: 12px;
+                    border: 0;
+                    padding: 12px 24px;
+                    outline: none;
+                }
+            }
+
+        }
+
+        .order button {
+            background: rgba(79, 205, 213, 1);
+        }
+
+        .phone button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(255, 168, 94, 1);
+        }
+    }
+
+    .advantages {
+        padding: 48px 96px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        &-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .icons-string {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .icon {
+                width: 400px;
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                gap: 16px;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 26px;
+            }
+        }
+    }
+
+    .gallery {
+        padding: 48px 96px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        .mySwiper3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .swipper-pag3 {
             display: flex !important;
             position: relative !important;
             height: 46px !important;
@@ -389,13 +576,101 @@
         }
     }
 
+    .footer {
+        padding: 48px 96px;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(54, 58, 61, 1);
+        color: white;
+        gap: 48px;
+
+        &-contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            p {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 28px;
+            }
+
+            .whatsapp-btn {
+                display: flex;
+                align-items: center;
+                background: #eaf9fa;
+                padding: 12px 24px;
+                gap: 8px;
+                border-radius: 12px;
+                color: #2cb1b9;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 140%;
+                justify-content: center;
+            }
+
+            &-bottom {
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+            }
+        }
+
+        &-links {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            &-string {
+                display: flex;
+
+
+                .links-block {
+                    display: flex;
+                    flex-direction: column;
+                    width: 322.67px;
+                    gap: 24px;
+                    padding: 12px 24px;
+
+                    h6 {
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 26px;
+
+                    }
+
+                    li {
+                        white-space: nowrap;
+                        /* Запрет переноса текста на новую строку */
+                        overflow: hidden;
+                        /* Скрытие текста, который не помещается */
+                        text-overflow: ellipsis;
+                    }
+
+                    a {
+                        color: rgba(184, 188, 194, 1);
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        text-align: left;
+                    }
+                }
+            }
+            .second-block {
+                width: 212.67px;
+            }
+        }
+    }
+
     h3 {
         font-size: 36px;
         font-weight: 700;
         line-height: 44px;
     }
 
-
+    .active-nav {
+        color: rgba(255, 168, 94, 1) !important;
+    }
 }
 
 .swiper-notification {

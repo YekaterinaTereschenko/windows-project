@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 * {
   margin: 0;
@@ -138,7 +139,7 @@
   padding: 48px 96px;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 20px;
 }
 .container .sales-head {
   display: flex;
@@ -153,6 +154,9 @@
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.container .sales h3 {
+  padding-bottom: 28px;
 }
 .container .sales .banners {
   display: flex;
@@ -174,6 +178,19 @@
   width: 100%;
 }
 .container .sales .banners .banner-mini img {
+  width: 100%;
+}
+.container .sales .banners-bottom {
+  display: flex;
+  gap: 20px;
+}
+.container .sales .banners-bottom-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+.container .sales .banners-bottom-block img {
   width: 100%;
 }
 .container .catalog {
@@ -253,10 +270,11 @@
   line-height: 22px;
 }
 .container .options {
-  padding: 48px 96px;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+}
+.container .options h3 {
+  padding: 48px 96px 0;
 }
 .container .options .group-option {
   width: 1248px;
@@ -269,7 +287,7 @@
   gap: 16px;
   padding: 20px;
   border-radius: 20px;
-  border: 1px solid gray;
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
   color: black;
 }
 .container .options-card h5 {
@@ -282,7 +300,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
 }
 .container .options .swipper-pag2 {
   display: flex !important;
@@ -290,6 +307,7 @@
   height: 46px !important;
   align-items: center;
   gap: 24px;
+  margin-bottom: 48px;
 }
 .container .options .swiper-button-next {
   position: static;
@@ -321,10 +339,227 @@
   width: 12px !important;
   height: 12px !important;
 }
+.container .options .swiper-slide {
+  padding: 48px 96px;
+  width: 87% !important;
+}
+.container .help {
+  padding: 48px 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f2f8;
+  gap: 24px;
+}
+.container .help h3 {
+  width: 33%;
+}
+.container .help-card {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 16px;
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+.container .help-card h5 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: center;
+}
+.container .help-card button {
+  border-radius: 12px;
+  border: 0;
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  color: white;
+}
+.container .help-card .input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.container .help-card .input-block label {
+  color: #6d737a;
+}
+.container .help-card .input-block input {
+  background: rgba(231, 233, 235, 0.5);
+  border-radius: 12px;
+  border: 0;
+  padding: 12px 24px;
+  outline: none;
+}
+.container .help .order button {
+  background: #4fcdd5;
+}
+.container .help .phone button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ffa85e;
+}
+.container .advantages {
+  padding: 48px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.container .advantages-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.container .advantages-icons .icons-string {
+  display: flex;
+  justify-content: space-between;
+}
+.container .advantages-icons .icon {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.container .gallery {
+  padding: 48px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.container .gallery .mySwiper3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+.container .gallery .swipper-pag3 {
+  display: flex !important;
+  position: relative !important;
+  height: 46px !important;
+  align-items: center;
+  gap: 24px;
+}
+.container .gallery .swiper-button-next {
+  position: static;
+  margin: 0 !important;
+  border-radius: 12px;
+  background: #eaf9fa;
+  height: 46px;
+  width: 96px;
+}
+.container .gallery .swiper-button-prev {
+  position: static;
+  margin: 0 !important;
+  border-radius: 12px;
+  background: #eaf9fa;
+  width: 96px;
+  height: 46px;
+}
+.container .gallery .swiper-button-next:after,
+.container .gallery .swiper-button-prev:after {
+  color: #4fcdd5 !important;
+  font-size: 16px !important;
+}
+.container .gallery .swiper-pagination {
+  position: static;
+  width: auto !important;
+  --swiper-theme-color: rgb(79, 205, 213);
+}
+.container .gallery .swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+}
+.container .footer {
+  padding: 48px 96px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #363a3d;
+  color: white;
+  gap: 48px;
+}
+.container .footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .footer-contact p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.container .footer-contact .whatsapp-btn {
+  display: flex;
+  align-items: center;
+  background: #eaf9fa;
+  padding: 12px 24px;
+  gap: 8px;
+  border-radius: 12px;
+  color: #2cb1b9;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  justify-content: center;
+}
+.container .footer-contact-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.container .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.container .footer-links-string {
+  display: flex;
+}
+.container .footer-links-string .links-block {
+  display: flex;
+  flex-direction: column;
+  width: 322.67px;
+  gap: 24px;
+  padding: 12px 24px;
+}
+.container .footer-links-string .links-block h6 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.container .footer-links-string .links-block li {
+  white-space: nowrap;
+  /* Запрет переноса текста на новую строку */
+  overflow: hidden;
+  /* Скрытие текста, который не помещается */
+  text-overflow: ellipsis;
+}
+.container .footer-links-string .links-block a {
+  color: #b8bcc2;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.container .footer-links .second-block {
+  width: 212.67px;
+}
 .container h3 {
   font-size: 36px;
   font-weight: 700;
   line-height: 44px;
+}
+.container .active-nav {
+  color: #ffa85e !important;
 }
 
 .swiper-notification {
