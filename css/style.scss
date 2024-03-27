@@ -532,6 +532,10 @@ body {
         gap: 48px;
         overflow-x: hidden;
 
+        img {
+            width: 24%;
+        }
+
         .mySwiper3 {
             display: flex;
             flex-direction: column;
@@ -755,8 +759,148 @@ body {
         }
     }
 
+    .offices {
+        padding: 48px 96px;
+        h3 {
+            margin-bottom: 100px;
+        }
+        &-block {
+            display: flex;
+            justify-content: space-between;
+            gap: 44px;
+            margin-bottom: 100px;
+
+            .contents {
+                width: 52%;
+                &-top {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .top-text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        h5 {
+                            font-weight: 600;
+                            font-size: 24px;
+                            line-height: 108%;
+                        }
+    
+                        p {
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 150%;
+                            color: #6d737a;
+                        }
+                    }
+                }
+
+                .call-btn {
+                    align-items: center;
+                    justify-content: center;
+                    background: #ffa85e;
+                    width: 50%;
+                }
+    
+                .whatsapp-btn {
+                    background: #4fcdd5;
+                    width: 50%;
+                }
+    
+                .order-btn {
+                    color: #2cb1b9;
+                    background: #eaf9fa;
+                    justify-content: center;
+                    margin: 16px 0;
+                }
+    
+                a {
+                    gap: 8px;
+                    display: flex;
+                    border-radius: 12px;
+                    border: 0;
+                    padding: 12px 24px;
+                    font-size: 19px;
+                    font-weight: 600;
+                    line-height: 28px;
+                    text-align: center;
+                    color: white;
+                }
+
+                &-bottom {
+                    display: flex;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+
+    .works {
+        padding: 48px 96px;
+
+        &-block {
+            h3 {
+                margin-bottom: 24px;
+            }
+        }
+
+        img {
+            width: 24%;
+        }
+
+        .mySwiper3, .mySwiper4, .mySwiper5 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .swipper-pag3 {
+            display: flex !important;
+            position: relative !important;
+            height: 46px !important;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .swiper-button-next {
+            position: static;
+            margin: 0 !important;
+            border-radius: 12px;
+            background: rgb(234, 249, 250);
+            height: 46px;
+            width: 96px;
+        }
+
+        .swiper-button-prev {
+            position: static;
+            margin: 0 !important;
+            border-radius: 12px;
+            background: rgb(234, 249, 250);
+            width: 96px;
+            height: 46px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            color: rgb(79, 205, 213) !important;
+            font-size: 16px !important;
+        }
+
+        .swiper-pagination {
+            position: static;
+            width: auto !important;
+            --swiper-theme-color: rgb(79, 205, 213);
+        }
+
+        .swiper-pagination-bullet {
+            width: 12px !important;
+            height: 12px !important;
+        }
+    }
+
     .content {
-        max-width: 1440px;
+        max-width: 1248px;
         margin: auto;
     }
 
