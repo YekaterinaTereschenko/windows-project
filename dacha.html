@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <header class="header">
+        <header class="header desc">
             <div class="content">
                 <div class="header-top">
                     <a href="./index.html" class="header-logo">
@@ -38,7 +38,6 @@
                                         <li><a href="./apartment.html">В квартиру</a></li>
                                         <li><a href="./dacha.html">На дачу</a></li>
                                         <li><a href="./cottage.html">В коттедж</a></li>
-                                        <!-- Добавьте другие ссылки здесь -->
                                     </ul>
                                 </button>
                             </li>
@@ -69,11 +68,20 @@
                                     </ul>
                                 </button>
                             </li>
-                            <li><a href="./works.html">Наши работы</a></li>
+                            <li><a href="#">Наши работы</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
+        </header>
+
+        <header class="header mob">
+            <a href="./index.html">
+                <img src="./images/Frame 7.svg" alt="">
+            </a>
+            <button id="burger-btn">
+                <img src="./images/menu.svg" alt="">
+            </button>
         </header>
         <!--  -->
         <section class="products">
@@ -81,6 +89,7 @@
                 <div class="products-head">
                     <div class="head-text">
                         <h3>Пластиковые окна на дачу</h3>
+                        <img class="mob" src="./images/products/dacha/Guarantee.svg" alt="">
                         <ul>
                             <li>&bull; Теплоизоляция</li>
                             <li>&bull; Прочность</li>
@@ -96,41 +105,49 @@
                             <a class="order-btn" href="#">Заказать звонок</a>
                         </div>
                     </div>
-                    <img src="./images/products/dacha/Guarantee.svg" alt="">
+                    <img class="desc" src="./images/products/dacha/Guarantee.svg" alt="">
                 </div>
 
                 <div class="products-left">
+                    <h3 class="mob">Теплоизоляция</h3>
                     <img src="./images/products/dacha/Guarantee (1).svg" alt="">
                     <div class="products-left-text">
-                        <h3>Теплоизоляция</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="desc">Теплоизоляция</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
                     </div>
                 </div>
 
                 <div class="products-right">
                     <div class="products-right-text">
-                        <h3>Прочность</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="desc">Прочность</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
                     </div>
                     <img src="./images/products/dacha/Guarantee (2).svg" alt="">
+                    <h3 class="mob">Прочность</h3>
                 </div>
 
                 <div class="products-left">
+                    <h3 class="mob">Устойчивость к погодным условиям</h3>
                     <img src="./images/products/dacha/Guarantee (3).svg" alt="">
                     <div class="products-left-text">
-                        <h3>Устойчивость к погодным условиям</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="desc">Устойчивость к погодным условиям</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
                     </div>
                 </div>
 
                 <div class="products-right">
                     <div class="products-right-text">
-                        <h3>Долговечность</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="desc">Долговечность</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
                     </div>
                     <img src="./images/products/dacha/Guarantee (4).svg" alt="">
+                    <h3 class="mob">Долговечность</h3>
                 </div>
-                
+
             </div>
         </section>
         <!--  -->
@@ -196,7 +213,7 @@
                     <h5>Или свяжитесь <br> с менеджером</h5>
                     <button>+7 962 446 73 97</button>
                     <button>
-                        <img src="./images/WhatsappLogo (1).svg" alt="">
+                        <img class="desc" src="./images/WhatsappLogo (1).svg" alt="">
                         Написать в WhatsApp
                     </button>
                 </div>
@@ -287,16 +304,17 @@
 <script src="./js/sctipt.js"></script>
 <script>
     var swiper3 = new Swiper(".mySwiper3", {
-    cssMode: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
-});
+        cssMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
 </script>
+
 </html>

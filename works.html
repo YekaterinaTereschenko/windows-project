@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <header class="header">
+        <header class="header desc">
             <div class="content">
                 <div class="header-top">
                     <a href="./index.html" class="header-logo">
@@ -74,30 +74,45 @@
                 </div>
             </div>
         </header>
+
+        <header class="header mob">
+            <a href="./index.html">
+                <img src="./images/Frame 7.svg" alt="">
+            </a>
+            <button id="burger-btn">
+                <img src="./images/menu.svg" alt="">
+            </button>
+        </header>
         <!--  -->
         <section class="works">
             <div class="content">
                 <h3>Наши работы</h3>
                 <div class="works-block">
                     <h3>Квартиры</h3>
-                    <div class="swiper2 mySwiper3">
+                    <div class="swiper2 mySwiper3 ">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide group-option">
                                 <img src="./images/works/aps (1).svg" alt="">
-                                <img src="./images/works/aps (2).svg" alt="">
-                                <img src="./images/works/aps (3).svg" alt="">
-                                <img src="./images/works/aps (4).svg" alt="">
+                                <img class="desc" src="./images/works/aps (2).svg" alt="">
+                                <img class="desc" src="./images/works/aps (3).svg" alt="">
+                                <img class="desc" src="./images/works/aps (4).svg" alt="">
                             </div>
                             <div class="swiper-slide group-option">
-                                <img src="./images/works/aps (1).svg" alt="">
+                                <img class="desc" src="./images/works/aps (1).svg" alt="">
                                 <img src="./images/works/aps (2).svg" alt="">
-                                <img src="./images/works/aps (3).svg" alt="">
-                                <img src="./images/works/aps (4).svg" alt="">
+                                <img class="desc" src="./images/works/aps (3).svg" alt="">
+                                <img class="desc" src="./images/works/aps (4).svg" alt="">
                             </div>
                             <div class="swiper-slide group-option">
-                                <img src="./images/works/aps (1).svg" alt="">
-                                <img src="./images/works/aps (2).svg" alt="">
+                                <img class="desc" src="./images/works/aps (1).svg" alt="">
+                                <img class="desc" src="./images/works/aps (2).svg" alt="">
                                 <img src="./images/works/aps (3).svg" alt="">
+                                <img class="desc" src="./images/works/aps (4).svg" alt="">
+                            </div>
+                            <div class="swiper-slide group-option ">
+                                <img class="desc" src="./images/works/aps (1).svg" alt="">
+                                <img class="desc" src="./images/works/aps (2).svg" alt="">
+                                <img class="desc" src="./images/works/aps (3).svg" alt="">
                                 <img src="./images/works/aps (4).svg" alt="">
                             </div>
                         </div>
@@ -136,11 +151,11 @@
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
                 <div class="works-block">
                     <h3>Коттеджи</h3>
-                    <div class="swiper2 mySwiper5">
+                    <div class="swiper2 mySwiper5 desc">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide group-option">
                                 <img src="./images/works/cottage (1).svg" alt="">
@@ -161,15 +176,49 @@
                                 <img src="./images/works/cottage (4).svg" alt="">
                             </div>
                         </div>
-                        <div class="swipper-pag3">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper2 mySwiper55 mob">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide group-option">
+                                <img src="./images/works/cottage (1).svg" alt="">
+                            </div>
+                            <div class="swiper-slide group-option">
+                                <img src="./images/works/cottage (2).svg" alt="">
+                            </div>
+                            <div class="swiper-slide group-option">
+                                <img src="./images/works/cottage (3).svg" alt="">
+                            </div>
+                            <div class="swiper-slide group-option">
+                                <img src="./images/works/cottage (4).svg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!--  -->
+        <section class="help">
+            <div class="content">
+                <h3>Нужна помощь?</h3>
+                <div class="help-card order">
+                    <h5>Оставьте заявку</h5>
+                    <div class="input-block">
+                        <label for="order-btn">Номер телефона</label>
+                        <input type="text" id="order-btn" value="+7">
+                    </div>
+                    <button>Заказать бесплатный замер</button>
+                </div>
+                <div class="help-card phone">
+                    <h5>Или свяжитесь <br> с менеджером</h5>
+                    <button>+7 962 446 73 97</button>
+                    <button>
+                        <img src="./images/WhatsappLogo (1).svg" alt="">
+                        Написать в WhatsApp
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--  -->
         <!--  -->
         <footer class="footer">
             <div class="content">
@@ -203,22 +252,22 @@
                         <ul class="links-block second-block">
                             <h6>Окна</h6>
                             <li>
-                                <a href="">В квартиру</a>
+                                <a href="./apartment.html">В квартиру</a>
                             </li>
                             <li>
-                                <a href="">На дачу</a>
+                                <a href="./dacha.html">На дачу</a>
                             </li>
                             <li>
-                                <a href="">В коттедж</a>
+                                <a href="./cottage.html">В коттедж</a>
                             </li>
                         </ul>
                         <ul class="links-block">
                             <h6>Портальное остекление</h6>
                             <li>
-                                <a href="">Порталы</a>
+                                <a href="./portal.html">Порталы</a>
                             </li>
                             <li>
-                                <a href="">Витражи</a>
+                                <a href="./stained-glass.html">Витражи</a>
                             </li>
                         </ul>
                     </div>
@@ -226,10 +275,10 @@
                         <ul class="links-block">
                             <h6>Аксессуары</h6>
                             <li>
-                                <a href="">Москитные сетки</a>
+                                <a href="./mosquito.html">Москитные сетки</a>
                             </li>
                             <li>
-                                <a href="">Подоконники</a>
+                                <a href="./sills.html">Подоконники</a>
                             </li>
                         </ul>
                         <ul class="links-block second-block">
@@ -252,7 +301,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./js/sliders.js"></script>
-<script src="./js/sctipt.js"></script>
+<!-- <script src="./js/sctipt.js"></script> -->
 <script>
     var swiper3 = new Swiper(".mySwiper3", {
         cssMode: true,
@@ -265,6 +314,7 @@
         },
         mousewheel: true,
         keyboard: true,
+        touch: true
     });
 
     var swiper4 = new Swiper(".mySwiper4", {

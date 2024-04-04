@@ -1,3 +1,5 @@
+// ==========================================================================
+// ВЫПАДАЮЩИЕ СПИСКИ
 const dropdownButtons = document.querySelectorAll('.dropdown-btn');
 
 dropdownButtons.forEach(function (button) {
@@ -17,6 +19,7 @@ dropdownButtons.forEach(function (button) {
 });
 
 // ==========================================================================
+// КАЛЬКУЛЯТОР
 
 const widthRange = document.getElementById('widthRange');
 const widthValue = document.getElementById('widthValue');
@@ -134,24 +137,52 @@ updateSelection();
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Получаем первый радио-кнопку в форме
     const laminathiafirstRadioButton = document.querySelector('#laminathia input[type="radio"]');
     const installationfirstRadioButton = document.querySelector('#installation input[type="radio"]');
 
-    // Устанавливаем атрибут checked для первой радио-кнопки
     laminathiafirstRadioButton.checked = true;
     installationfirstRadioButton.checked = true;
 });
 
 function toggleButton(button) {
-    // Удаляем класс active-btn у всех кнопок
     const buttons = document.querySelectorAll('.head button');
     buttons.forEach(btn => {
         btn.classList.remove('active-btn');
         btn.querySelector('p').style.display = 'none';
     });
 
-    // Добавляем класс active-btn и показываем тег p для нажатой кнопки
     button.classList.add('active-btn');
     button.querySelector('p').style.display = 'block';
+}
+
+
+// ==========================================================================
+// ЗАПОЛНЕНИЕ 
+const orderInput = document.querySelector('#order-input'); // Замените 'order-input' на правильный идентификатор вашего инпута
+const orderBtn = document.querySelector('.order-btnn');
+
+orderInput.addEventListener('input', function() {
+    if (orderInput.value.length <= 2) {
+        orderBtn.style.background = 'rgba(160, 166, 173, 1)';
+    } else {
+        orderBtn.style.background = 'rgba(44, 177, 185, 1)';
+    }
+});
+
+
+// ===========================================================================
+// АДАПТИВ
+const clientWidth = document.documentElement.clientWidth;
+const oneSide = document.getElementById('oneside')
+const twoSides = document.getElementById('twosides')
+const takeSize = document.getElementById('take-size')
+const takeSize2 = document.getElementById('take-size2')
+console.log('Client Width:', clientWidth);
+
+if(clientWidth < 770) {
+    oneSide.textContent = '1 сторона'
+    twoSides.textContent = '2 стороны'
+    takeSize.textContent = 'Бесплатный замер'
+    takeSize2.textContent = 'Бесплатный замер'
+    orderBtn.textContent = 'Бесплатный замер'
 }

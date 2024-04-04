@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <header class="header">
+        <header class="header desc">
             <div class="content">
                 <div class="header-top">
                     <a href="./index.html" class="header-logo">
@@ -68,11 +68,20 @@
                                     </ul>
                                 </button>
                             </li>
-                            <li><a href="./works.html">Наши работы</a></li>
+                            <li><a href="#">Наши работы</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
+        </header>
+
+        <header class="header mob">
+            <a href="./index.html">
+                <img src="./images/Frame 7.svg" alt="">
+            </a>
+            <button id="burger-btn">
+                <img src="./images/menu.svg" alt="">
+            </button>
         </header>
         <!--  -->
         <section class="slider">
@@ -90,8 +99,8 @@
                                     </ul>
                                 </div>
                                 <div class="btns">
-                                    <a class="call-btn" href="#">Позвонить</a>
-                                    <a class="whatsapp-btn" href="#">
+                                    <a class="call-btn" href="tel:+79624467397">Позвонить</a>
+                                    <a class="whatsapp-btn" href="https://wa.me/79624467397">
                                         <img src="./images/WhatsappLogo (1).svg" alt="">
                                         Написать в WhatsApp
                                     </a>
@@ -110,8 +119,8 @@
                                     </ul>
                                 </div>
                                 <div class="btns">
-                                    <a class="call-btn" href="#">Позвонить</a>
-                                    <a class="whatsapp-btn" href="#">
+                                    <a class="call-btn" href="tel:+79624467397">Позвонить</a>
+                                    <a class="whatsapp-btn" href="https://wa.me/79624467397">
                                         <img src="./images/WhatsappLogo (1).svg" alt="">
                                         Написать в WhatsApp
                                     </a>
@@ -130,8 +139,8 @@
                                     </ul>
                                 </div>
                                 <div class="btns">
-                                    <a class="call-btn" href="#">Позвонить</a>
-                                    <a class="whatsapp-btn" href="#">
+                                    <a class="call-btn" href="tel:+79624467397">Позвонить</a>
+                                    <a class="whatsapp-btn" href="https://wa.me/79624467397">
                                         <img src="./images/WhatsappLogo (1).svg" alt="">
                                         Написать в WhatsApp
                                     </a>
@@ -227,12 +236,12 @@
 
                                 <div class="form_radio_btn">
                                     <input type="radio" id="option2" name="answer" value="100">
-                                    <label for="option2">Односторонняя</label>
+                                    <label id="oneside" for="option2">Односторонняя</label>
                                 </div>
 
                                 <div class="form_radio_btn">
                                     <input type="radio" id="option3" name="answer" value="200">
-                                    <label for="option3">Двухсторонняя</label>
+                                    <label id="twosides" for="option3">Двухсторонняя</label>
                                 </div>
                             </form>
                         </div>
@@ -267,8 +276,8 @@
                     </div>
                     <div class="price-blocks">
                         <div class="price-blocks-bg">
-                            <h4>Примерная стоимость</h4>
-                            <p>Ознакомительный расчет. Итоговая стоимость будет известна после замера нашими инженерами
+                            <h4 class="desc">Примерная стоимость</h4>
+                            <p class="desc">Ознакомительный расчет. Итоговая стоимость будет известна после замера нашими инженерами
                             </p>
                             <div class="price-blocks-string">
                                 <div class="block" id="">
@@ -307,7 +316,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="">Заказать бесплатный замер</a>
+                        <a id="take-size" href="">Заказать бесплатный замер</a>
                     </div>
                 </div>
             </div>
@@ -533,24 +542,24 @@
             </div>
         </section>
         <!--  -->
-        <section class="help">
+        <section class="help help-mar">
             <div class="content">
                 <h3>Нужна помощь?</h3>
                 <div class="help-card order">
                     <h5>Оставьте заявку</h5>
                     <div class="input-block">
-                        <label for="order-btn">Номер телефона</label>
-                        <input type="text" id="order-btn" placeholder="+7">
+                        <label for="order-input">Номер телефона</label>
+                        <input type="text" id="order-input" value="+7">
                     </div>
-                    <button>Заказать бесплатный замер</button>
+                    <button class="order-btnn">Заказать бесплатный замер</button>
                 </div>
                 <div class="help-card phone">
                     <h5>Или свяжитесь <br> с менеджером</h5>
-                    <button>+7 962 446 73 97</button>
-                    <button>
-                        <img src="./images/WhatsappLogo (1).svg" alt="">
+                    <a href="tel:+79624467397">+7 962 446 73 97</button>
+                    <a href="https://wa.me/79624467397">
+                        <img class="desc" src="./images/WhatsappLogo (1).svg" alt="">
                         Написать в WhatsApp
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -647,15 +656,15 @@
                         <label for="order-btn">Номер телефона</label>
                         <input type="text" id="order-btn" placeholder="+7">
                     </div>
-                    <button>Заказать бесплатный замер</button>
+                    <button id="take-size2">Заказать бесплатный замер</button>
                 </div>
                 <div class="help-card phone">
                     <h5>Или свяжитесь <br> с менеджером</h5>
-                    <button>+7 962 446 73 97</button>
-                    <button>
-                        <img src="./images/WhatsappLogo (1).svg" alt="">
+                    <a href="tel:+79624467397">+7 962 446 73 97</a>
+                    <a href="https://wa.me/79624467397">
+                        <img class="desc" src="./images/WhatsappLogo (1).svg" alt="">
                         Написать в WhatsApp
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>

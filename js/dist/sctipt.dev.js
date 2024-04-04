@@ -1,5 +1,7 @@
 "use strict";
 
+// ==========================================================================
+// ВЫПАДАЮЩИЕ СПИСКИ
 var dropdownButtons = document.querySelectorAll('.dropdown-btn');
 dropdownButtons.forEach(function (button) {
   button.addEventListener('click', function () {
@@ -15,6 +17,7 @@ dropdownButtons.forEach(function (button) {
     }
   });
 }); // ==========================================================================
+// КАЛЬКУЛЯТОР
 
 var widthRange = document.getElementById('widthRange');
 var widthValue = document.getElementById('widthValue');
@@ -119,22 +122,47 @@ installationForm.addEventListener('change', updateSelection);
 updateCheckboxSelection();
 updateSelection();
 document.addEventListener("DOMContentLoaded", function () {
-  // Получаем первый радио-кнопку в форме
   var laminathiafirstRadioButton = document.querySelector('#laminathia input[type="radio"]');
-  var installationfirstRadioButton = document.querySelector('#installation input[type="radio"]'); // Устанавливаем атрибут checked для первой радио-кнопки
-
+  var installationfirstRadioButton = document.querySelector('#installation input[type="radio"]');
   laminathiafirstRadioButton.checked = true;
   installationfirstRadioButton.checked = true;
 });
 
 function toggleButton(button) {
-  // Удаляем класс active-btn у всех кнопок
   var buttons = document.querySelectorAll('.head button');
   buttons.forEach(function (btn) {
     btn.classList.remove('active-btn');
     btn.querySelector('p').style.display = 'none';
-  }); // Добавляем класс active-btn и показываем тег p для нажатой кнопки
-
+  });
   button.classList.add('active-btn');
   button.querySelector('p').style.display = 'block';
+} // ==========================================================================
+// ЗАПОЛНЕНИЕ 
+
+
+var orderInput = document.querySelector('#order-input'); // Замените 'order-input' на правильный идентификатор вашего инпута
+
+var orderBtn = document.querySelector('.order-btnn');
+orderInput.addEventListener('input', function () {
+  if (orderInput.value.length <= 2) {
+    orderBtn.style.background = 'rgba(160, 166, 173, 1)';
+  } else {
+    orderBtn.style.background = 'rgba(44, 177, 185, 1)';
+  }
+}); // ===========================================================================
+// АДАПТИВ
+
+var clientWidth = document.documentElement.clientWidth;
+var oneSide = document.getElementById('oneside');
+var twoSides = document.getElementById('twosides');
+var takeSize = document.getElementById('take-size');
+var takeSize2 = document.getElementById('take-size2');
+console.log('Client Width:', clientWidth);
+
+if (clientWidth < 770) {
+  oneSide.textContent = '1 сторона';
+  twoSides.textContent = '2 стороны';
+  takeSize.textContent = 'Бесплатный замер';
+  takeSize2.textContent = 'Бесплатный замер';
+  orderBtn.textContent = 'Бесплатный замер';
 }

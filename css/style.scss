@@ -216,7 +216,7 @@ body {
                 .head button.active-btn svg path {
                     fill: #1B1D1F;
                 }
-                
+
                 .head button svg path {
                     fill: #A0A6AD;
                 }
@@ -761,14 +761,17 @@ body {
     .options {
         display: flex;
         flex-direction: column;
+
         h3 {
             padding: 48px 48px 0;
         }
+
         .group-option {
             width: 1248px;
             display: flex;
             justify-content: space-between;
         }
+
         &-card {
             display: flex;
             flex-direction: column;
@@ -777,6 +780,7 @@ body {
             border-radius: 20px;
             box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
             color: black;
+
             h5 {
                 font-size: 14px;
                 font-weight: 600;
@@ -784,11 +788,13 @@ body {
                 text-transform: uppercase;
             }
         }
+
         .mySwiper2 {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
         .swipper-pag2 {
             display: flex !important;
             position: relative !important;
@@ -797,6 +803,7 @@ body {
             gap: 24px;
             margin-bottom: 48px;
         }
+
         .swiper-button-next {
             position: static;
             margin: 0 !important;
@@ -805,6 +812,7 @@ body {
             height: 46px;
             width: 96px;
         }
+
         .swiper-button-prev {
             position: static;
             margin: 0 !important;
@@ -813,20 +821,24 @@ body {
             width: 96px;
             height: 46px;
         }
+
         .swiper-button-next:after,
         .swiper-button-prev:after {
             color: rgb(79, 205, 213) !important;
             font-size: 16px !important;
         }
+
         .swiper-pagination {
             position: static;
             width: auto !important;
             --swiper-theme-color: rgb(79, 205, 213);
         }
+
         .swiper-pagination-bullet {
             width: 12px !important;
             height: 12px !important;
         }
+
         .swiper-slide {
             padding: 48px;
             width: 100% !important;
@@ -869,6 +881,7 @@ body {
                 text-align: center;
             }
 
+            a,
             button {
                 border-radius: 12px;
                 border: 0;
@@ -901,10 +914,10 @@ body {
         }
 
         .order button {
-            background: rgba(79, 205, 213, 1);
+            background: rgba(160, 166, 173, 1);
         }
 
-        .phone button {
+        .phone a {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1278,6 +1291,7 @@ body {
 
         img {
             width: 24%;
+            height: max-content;
         }
 
         .mySwiper3,
@@ -1325,6 +1339,16 @@ body {
             position: static;
             width: auto !important;
             --swiper-theme-color: rgb(79, 205, 213);
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .swiper-wrapper {
+            height: 185px;
         }
 
         .swiper-pagination-bullet {
@@ -1399,3 +1423,332 @@ body {
         color: rgba(255, 168, 94, 1);
     }
 }
+
+.mob {
+    display: none !important;
+}
+
+@media screen and (max-width: 769px) {
+    .desc {
+        display: none !important;
+    }
+
+    .mob {
+        display: flex !important;
+    }
+
+    .header {
+        flex-direction: row !important;
+        justify-content: space-between;
+        padding: 0 !important;
+
+        button {
+            border: 0;
+            background-color: transparent;
+            padding: 0 20px;
+        }
+
+        a {
+            width: 80%;
+
+            img {
+                width: 100% !important;
+            }
+        }
+    }
+
+    .works {
+        .swiper2 {
+            flex-direction: column !important;
+        }
+
+        .swiper-slide {
+            height: auto !important;
+
+            img {
+                width: 100% !important;
+            }
+        }
+
+        .swiper-wrapper {
+            height: fit-content !important;
+        }
+    }
+
+    h3 {
+        font-size: 24px !important;
+        font-weight: 700 !important;
+        line-height: 44px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .help {
+        .content {
+            flex-direction: column;
+        }
+
+        .phone {
+            button {
+                background-color: rgba(255, 168, 94, 1);
+            }
+        }
+
+        h3,
+        .order,
+        .phone {
+            width: 100% !important;
+        }
+    }
+
+    .products {
+
+        &-left {
+            flex-direction: column;
+
+            h3 {
+                margin: 0 !important;
+            }
+
+            gap: 20px !important;
+            align-items: start !important;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-right {
+            flex-direction: column-reverse;
+
+            h3 {
+                margin: 0 !important;
+            }
+
+            gap: 20px !important;
+            align-items: start !important;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-head {
+            flex-direction: column;
+
+            .mob {
+                width: 100% !important;
+                margin-bottom: 20px;
+            }
+
+            .btns {
+                flex-direction: column;
+
+                a {
+                    justify-content: center;
+                }
+            }
+        }
+
+
+    }
+
+    .calc {
+        padding: 0 !important;
+        .content {
+            width: 100% !important;
+            background: #f1f2f8;
+            padding: 20px 0;
+
+            h3 {
+                padding-left: 20px !important;
+            }
+        }
+
+        &-content {
+            flex-direction: column;
+            gap: 0 !important;
+
+            .calc-block {
+                width: 100% !important;
+                border-radius: 0;
+
+                .head {
+                    border: 2px solid rgba(255, 186, 128, 1);
+                    border-radius: 12px;
+                    overflow: hidden;
+
+                    .active-btn {
+                        background: rgba(255, 186, 128, 1) !important;
+                        border: 0;
+                        gap: 8px;
+                        padding: 4px 7px !important;
+                        border-radius: 0 !important;
+                    }
+
+                    button {
+                        width: 20% !important;
+                        display: flex;
+                        justify-content: center;
+                        padding: 4px 7px !important;
+                        border-left: 1px solid rgba(255, 186, 128, 1) !important;
+                        border-right: 1px solid rgba(255, 186, 128, 1) !important;
+
+                        p {
+                            display: none !important;
+                        }
+                    }
+                }
+
+                .selector {
+                    h5 {
+                        font-size: 16px !important;
+                    }
+
+                    .form_radio_btn label {
+                        padding: 12px 11px !important;
+                        border: 0 !important;
+                        border-left: 1px solid rgba(255, 186, 128, 1) !important;
+                        border-right: 1px solid rgba(255, 186, 128, 1) !important;
+
+                    }
+
+                    form {
+                        border: 2px solid rgba(255, 186, 128, 1);
+                        border-radius: 12px;
+                        overflow: hidden;
+                    }
+
+                    #options {
+                        flex-direction: column;
+                        border: 0;
+
+                        label {
+                            background-color: transparent !important;
+                            width: 60%;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+
+            .size {
+                display: none !important;
+            }
+
+            .block {
+                img {
+                    width: 80%;
+                }
+            }
+
+            .block-text {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        #take-size {
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    section {
+        padding: 0px !important;
+    }
+
+    .sales {
+        padding: 100px 0 !important;
+
+        &-head {
+            a {
+                display: none !important;
+            }
+        }
+
+        .banners {
+            flex-direction: column;
+            gap: 10px !important;
+
+            div {
+                gap: 10px !important;
+                width: 100% !important;
+            }
+        }
+    }
+
+    .catalog {
+        background: transparent !important;
+
+        h3 {
+            padding: 20px 0 !important;
+        }
+
+        &-cards {
+            flex-direction: column;
+
+            .catalog-card {
+                box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1) !important;
+            }
+        }
+    }
+
+    .options {
+        display: none !important;
+    }
+
+    .help-mar {
+        margin: 60px 0;
+    }
+
+    .advantages {
+        &-icons {
+            gap: 0px !important;
+        }
+        .icons-string {
+            flex-direction: column;
+
+            .icon {
+                padding: 10px 0 !important;
+                img {
+                    width: 60px !important;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .content {
+            flex-direction: column;
+        }
+
+        &-links {
+            &-string {
+                flex-direction: column;
+
+                ul {
+                    padding: 12px 0 !important;
+                }
+            }
+        }
+    }
+}
+
+// .slider-container {
+//     overflow: hidden;
+// }
+
+// .slider {
+//     display: flex;
+//     transition: transform 0.5s ease;
+//     padding: 0 !important;
+// }
+
+// .slide {
+//     flex: 0 0 100%;
+//     max-width: 100%;
+//     img {
+//         width: 100% !important;
+//         height: auto;
+//     }
+// }
