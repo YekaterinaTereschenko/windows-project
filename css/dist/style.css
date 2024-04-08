@@ -753,7 +753,7 @@ body {
 .container .help .order button {
   background: #a0a6ad;
 }
-.container .help .phone a {
+.container .help .phone button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1130,6 +1130,9 @@ body {
   line-height: 44px;
   margin-bottom: 48px;
 }
+.container .white-color {
+  color: white !important;
+}
 .container .active-nav {
   color: #ffa85e !important;
 }
@@ -1176,8 +1179,111 @@ body {
   color: #ffa85e;
 }
 
+#modal-block-hide .head {
+  display: flex;
+  text-align: start;
+  align-items: center;
+  gap: 16px;
+}
+#modal-block-hide .head h3 {
+  line-height: 26px !important;
+}
+#modal-block-hide p {
+  text-align: start;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #6d737a;
+}
+#modal-block-hide #close-modal {
+  background-color: #2cb1b9;
+}
+
 .mob {
   display: none !important;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  margin: 15% auto;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+.modal-content .help-card {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 16px;
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+.modal-content .help-card label {
+  text-align: start;
+}
+.modal-content .help-card h5 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: center;
+}
+.modal-content .help-card a,
+.modal-content .help-card button {
+  border-radius: 12px;
+  border: 0;
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  color: white;
+}
+.modal-content .help-card .input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.modal-content .help-card .input-block label {
+  color: #6d737a;
+}
+.modal-content .help-card .input-block input {
+  background: rgba(231, 233, 235, 0.5);
+  border-radius: 12px;
+  border: 0;
+  padding: 12px 24px;
+  outline: none;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 769px) {
@@ -1187,6 +1293,114 @@ body {
 
   .mob {
     display: flex !important;
+  }
+
+  .burger-menu {
+    flex-direction: column;
+    height: 88vh;
+    justify-content: space-between;
+  }
+  .burger-menu .bottom {
+    padding: 20px 20px 60px;
+  }
+  .burger-menu .bottom p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    color: #2cb1b9;
+  }
+  .burger-menu .btns-contact {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .burger-menu .btns-contact .call-btn {
+    align-items: center;
+    justify-content: center;
+    background: #ffa85e;
+  }
+  .burger-menu .btns-contact .order-btn {
+    color: #2cb1b9;
+    background: #eaf9fa;
+  }
+  .burger-menu .btns-contact .whatsapp-btn {
+    background: #4fcdd5 !important;
+    color: white !important;
+  }
+  .burger-menu .btns-contact .whatsapp-btn img {
+    width: 24px;
+  }
+  .burger-menu .btns-contact a {
+    gap: 8px;
+    display: flex;
+    border-radius: 12px;
+    border: 0;
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  .burger-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  .burger-menu button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 6px 20px;
+  }
+  .burger-menu .button-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .burger-menu a {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 6px 20px;
+  }
+  .burger-menu .dropdown-btn-mob.active {
+    background: #fff1e5;
+    border-top: 1px solid #ffa85e;
+    border-bottom: 1px solid #ffa85e;
+  }
+  .burger-menu .dropdown-btn-mob.active .button-content {
+    color: #ffa85e;
+  }
+  .burger-menu .dropdown-content.active {
+    display: block !important;
+    position: static !important;
+    background: #fff1e5;
+    width: 100% !important;
+    margin-top: 10px;
+    text-align: start !important;
+    z-index: 999;
+  }
+  .burger-menu .dropdown-content.active li {
+    margin-bottom: 10px;
+  }
+  .burger-menu .dropdown-content.active a {
+    padding: 0;
+    font-weight: 500;
+  }
+  .burger-menu .dropdown-content.active a:hover {
+    color: #ffa85e;
   }
 
   .header {
@@ -1209,11 +1423,27 @@ body {
   .works .swiper2 {
     flex-direction: column !important;
   }
+  .works h3 {
+    margin-bottom: 50px !important;
+  }
   .works .swiper-slide {
     height: auto !important;
   }
   .works .swiper-slide img {
     width: 100% !important;
+  }
+  .works .sliders {
+    margin-bottom: 100px;
+  }
+  .works .slick-list {
+    height: min-content !important;
+  }
+  .works .slick-slide img {
+    width: 100% !important;
+  }
+  .works .slick-slide {
+    width: 354px !important;
+    margin: 0 10px;
   }
   .works .swiper-wrapper {
     height: fit-content !important;
@@ -1236,6 +1466,31 @@ body {
 .help .order,
 .help .phone {
     width: 100% !important;
+  }
+
+  .offices .contents-top img {
+    display: none;
+  }
+  .offices .map {
+    display: none;
+  }
+  .offices-block .contents {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .offices-block .contents p {
+    padding: 20px 0;
+  }
+  .offices-block .contents-bottom {
+    flex-direction: column;
+  }
+  .offices-block .contents-bottom a {
+    width: 100% !important;
+    justify-content: center;
+  }
+  .offices-block .contents .order-btn {
+    order: 1;
   }
 
   .products-left {
@@ -1272,6 +1527,59 @@ body {
   }
   .products-head .btns a {
     justify-content: center;
+  }
+
+  .slider {
+    height: min-content !important;
+    padding: 0 20px 100px !important;
+  }
+  .slider .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .slider .btns .call-btn {
+    align-items: center;
+    justify-content: center;
+    background: #ffa85e;
+  }
+  .slider .btns .whatsapp-btn {
+    background: #4fcdd5;
+  }
+  .slider .btns .whatsapp-btn img {
+    width: 24px;
+  }
+  .slider .btns .order-btn {
+    color: #2cb1b9;
+    background: #eaf9fa;
+  }
+  .slider .btns a {
+    gap: 8px;
+    display: flex;
+    border-radius: 12px;
+    border: 0;
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    justify-content: center;
+  }
+  .slider .swiper-wrapper {
+    height: min-content !important;
+  }
+  .slider .swiper-slide {
+    background-image: none !important;
+    padding: 0px !important;
+  }
+  .slider .swiper-slide h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: left;
   }
 
   .calc {
@@ -1319,6 +1627,17 @@ body {
   .calc-content .calc-block .selector h5 {
     font-size: 16px !important;
   }
+  .calc-content .calc-block .selector .input-value input {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 12px;
+    border: 0;
+    outline: 0;
+    width: 100%;
+  }
   .calc-content .calc-block .selector .form_radio_btn label {
     padding: 12px 11px !important;
     border: 0 !important;
@@ -1364,6 +1683,9 @@ body {
   .sales-head a {
     display: none !important;
   }
+  .sales-mob {
+    padding-top: 0px !important;
+  }
   .sales .banners {
     flex-direction: column;
     gap: 10px !important;
@@ -1371,6 +1693,14 @@ body {
   .sales .banners div {
     gap: 10px !important;
     width: 100% !important;
+  }
+  .sales .banners-bottom {
+    flex-direction: column;
+    padding-top: 10px !important;
+  }
+  .sales .banners-bottom-block {
+    width: 100% !important;
+    gap: 10px !important;
   }
 
   .catalog {
@@ -1402,18 +1732,62 @@ body {
   }
   .advantages .icons-string .icon {
     padding: 10px 0 !important;
+    width: 100% !important;
   }
   .advantages .icons-string .icon img {
     width: 60px !important;
   }
 
+  .gallery .slick-list {
+    height: min-content !important;
+  }
+  .gallery .slick-slide img {
+    width: 100% !important;
+  }
+
   .footer .content {
     flex-direction: column;
+  }
+  .footer .btns-contact {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .footer .btns-contact .call-btn {
+    align-items: center;
+    justify-content: center;
+    background: #ffa85e;
+  }
+  .footer .btns-contact .order-btn {
+    color: #2cb1b9;
+    background: #eaf9fa;
+  }
+  .footer .btns-contact .whatsapp-btn {
+    background: #4fcdd5 !important;
+    color: white !important;
+  }
+  .footer .btns-contact .whatsapp-btn img {
+    width: 24px;
+  }
+  .footer .btns-contact a {
+    gap: 8px;
+    display: flex;
+    border-radius: 12px;
+    border: 0;
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
   }
   .footer-links-string {
     flex-direction: column;
   }
   .footer-links-string ul {
+    width: 100% !important;
     padding: 12px 0 !important;
   }
 }

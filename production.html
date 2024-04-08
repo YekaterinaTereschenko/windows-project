@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/dist/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <title>Оконцево</title>
+</head>
+
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="help-card order" id="modal-block">
+                <h5>Оставьте заявку</h5>
+                <div class="input-block">
+                    <label for="order-input">Номер телефона</label>
+                    <input type="text" id="order-input" value="+7">
+                </div>
+                <button class="order-btnn" id="modal-btn-1">Заказать звонок</button>
+            </div>
+            <div class="help-card order" id="modal-block-hide" style="display: none;">
+                <div class="head">
+                    <img src="./images/rocket-icon.svg" alt="">
+                    <h3>Заявка успешно отправлена!</h3>
+                </div>
+                <p>Менеджер перезвонит вам в ближайшее время</p>
+                <button id="close-modal">Готово</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header class="header desc">
+            <div class="content">
+                <div class="header-top">
+                    <a href="./index.html" class="header-logo">
+                        <img src="./images/Frame 7.svg" alt="logo">
+                    </a>
+                    <div class="header-top-text">
+                        <p>Производство в г. Ставрополь, ул. Мира, 1Б</p>
+                        <a class="phone-btn" href="tel:+79624467397">+7-962-446-73-97</a>
+                        <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                            <img src="./images/WhatsappLogo.svg" alt="">
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="./sales.html">Акции</a></li>
+                            <li>
+                                <button class="dropdown-btn">Окна
+                                    <img src="./images/CaretDown.svg" alt="">
+                                    <ul class="dropdown-content">
+                                        <li><a href="./apartment.html">В квартиру</a></li>
+                                        <li><a href="./dacha.html">На дачу</a></li>
+                                        <li><a href="./cottage.html">В коттедж</a></li>
+                                    </ul>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-btn">Портальное остекление
+                                    <img src="./images/CaretDown.svg" alt="">
+                                    <ul class="dropdown-content">
+                                        <li><a href="./portal.html">Порталы</a></li>
+                                        <li><a href="./stained-glass.html">Витражи</a></li>
+                                    </ul>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-btn">Аксессуары
+                                    <img src="./images/CaretDown.svg" alt="">
+                                    <ul class="dropdown-content">
+                                        <li><a href="./mosquito.html">Москитные сетки</a></li>
+                                        <li><a href="./sills.html">Подоконники</a></li>
+                                    </ul>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-btn">О нас
+                                    <img src="./images/CaretDown.svg" alt="">
+                                    <ul class="dropdown-content">
+                                        <li><a href="./production.html">Наше производство</a></li>
+                                        <li><a href="./offices.html">Офисы продаж</a></li>
+                                    </ul>
+                                </button>
+                            </li>
+                            <li><a href="./works.html">Наши работы</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <header class="header mob">
+            <a href="./index.html">
+                <img src="./images/Frame 7.svg" alt="">
+            </a>
+            <button id="burger-btn">
+                <img src="./images/menu.svg" alt="">
+            </button>
+        </header>
+
+        <aside class="burger-menu" style="display: none;">
+            <ul>
+                <li><a href="./sales.html">Акции</a></li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            Окна
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./apartment.html">В квартиру</a></li>
+                            <li><a href="./dacha.html">На дачу</a></li>
+                            <li><a href="./cottage.html">В коттедж</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            Портальное остекление
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./portal.html">Порталы</a></li>
+                            <li><a href="./stained-glass.html">Витражи</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            Аксессуары
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./mosquito.html">Москитные сетки</a></li>
+                            <li><a href="./sills.html">Подоконники</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            О нас
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./production.html">Наше производство</a></li>
+                            <li><a href="./offices.html">Офисы продаж</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li><a href="./works.html">Наши работы</a></li>
+            </ul>
+            <div class="bottom">
+                <p>Производство в г. Ставрополь, ул. Мира, 1Б</p>
+                <div class="mob btns-contact">
+                    <a class="call-btn" href="tel:+79624467397">Позвонить</a>
+                    <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                        <img src="./images/WhatsappLogo (1).svg" alt="">
+                        Написать в WhatsApp
+                    </a>
+                    <a class="order-btn openModal">Заказать звонок</a>
+                </div>
+            </div>
+        </aside>
+        <!--  -->
+        <section class="works">
+            <div class="content">
+                <h3>Наше производство</h3>
+                <div class="works-block">
+                    <h3>Цех №1</h3>
+                    <div class="swiper2 mySwiper3 desc">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide group-option">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                            </div>
+                            <div class="swiper-slide group-option">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                            </div>
+                            <div class="swiper-slide group-option">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                            </div>
+                            <div class="swiper-slide group-option ">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swipper-pag3">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <div class="sliders mob">
+                        <div><img src="./images/image 45.svg" alt="Slide 1"></div>
+                        <div><img src="./images/image 45.svg" alt="Slide 2"></div>
+                        <div><img src="./images/image 45.svg" alt="Slide 3"></div>
+                        <div><img src="./images/image 45.svg" alt="Slide 3"></div>
+                    </div>
+                </div>
+                <div class="works-block">
+                    <h3>Цех №2</h3>
+                    <div class="swiper2 mySwiper4 desc">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide group-option">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                            </div>
+                            <div class="swiper-slide group-option">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                            </div>
+                            <div class="swiper-slide group-option">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swipper-pag3">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <div class="sliders mob">
+                        <div><img src="./images/image 45.svg" alt="Slide 1"></div>
+                        <div><img src="./images/image 45.svg" alt="Slide 2"></div>
+                        <div><img src="./images/image 45.svg" alt="Slide 3"></div>
+                        <div><img src="./images/image 45.svg" alt="Slide 3"></div>
+                    </div>
+                </div>
+                <div class="works-block">
+                    <h3>Цех №3</h3>
+                    <div class="swiper2 mySwiper5 desc">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide group-option">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                            </div>
+                            <div class="swiper-slide group-option">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                            </div>
+                            <div class="swiper-slide group-option">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                                <img src="./images/image 45.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sliders mob">
+                        <div><img src="./images/image 45.svg" alt="Slide 1"></div>
+                        <div><img src="./images/image 45.svg" alt="Slide 2"></div>
+                        <div><img src="./images/image 45.svg" alt="Slide 3"></div>
+                        <div><img src="./images/image 45.svg" alt="Slide 3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <section class="help">
+            <div class="content">
+                <h3>Нужна помощь?</h3>
+                <div class="help-card order">
+                    <h5>Оставьте заявку</h5>
+                    <div class="input-block">
+                        <label for="order-btn">Номер телефона</label>
+                        <input type="text" id="order-btn" value="+7">
+                    </div>
+                    <button class="order-btnn">Заказать бесплатный замер</button>
+                </div>
+                <div class="help-card phone">
+                    <h5>Или свяжитесь <br> с менеджером</h5>
+                    <button>+7 962 446 73 97</button>
+                    <button>
+                        <img src="./images/WhatsappLogo (1).svg" alt="">
+                        Написать в WhatsApp
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <!--  -->
+        <footer class="footer">
+            <div class="content">
+                <div class="footer-contact">
+                    <div class="footer-contact-top">
+                        <img src="./images/Frame 7 (1).svg" alt="">
+                        <p class="desc">Производство в <br>г. Ставрополь, <br> ул. Мира, 1Б</p>
+                        <p class="mob">Производство в <br>г. Ставрополь, ул. Мира, 1Б</p>
+                    </div>
+                    <div class="footer-contact-bottom">
+                        <p class="desc">+7-962-446-73-97</p>
+                        <a class="whatsapp-btn desc" href="https://wa.me/79624467397">
+                            <img src="./images/WhatsappLogo.svg" alt="">
+                            WhatsApp
+                        </a>
+                        <div class="mob btns-contact">
+                            <a class="call-btn" href="tel:+79624467397">Позвонить</a>
+                            <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                                <img src="./images/WhatsappLogo (1).svg" alt="">
+                                Написать в WhatsApp
+                            </a>
+                            <a class="order-btn openModal">Заказать звонок</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-string">
+                        <ul class="links-block">
+                            <h6>Акции</h6>
+                            <li>
+                                <a href="#">Скидка -10% в честь дня рождения компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Бесплатная установка</a>
+                            </li>
+                            <li>
+                                <a href="#">Теплый балкон от 6500 ₽ за кв. м.</a>
+                            </li>
+                        </ul>
+                        <ul class="links-block second-block">
+                            <h6>Окна</h6>
+                            <li>
+                                <a href="./apartment.html">В квартиру</a>
+                            </li>
+                            <li>
+                                <a href="./dacha.html">На дачу</a>
+                            </li>
+                            <li>
+                                <a href="./cottage.html">В коттедж</a>
+                            </li>
+                        </ul>
+                        <ul class="links-block">
+                            <h6>Портальное остекление</h6>
+                            <li>
+                                <a href="./portal.html">Порталы</a>
+                            </li>
+                            <li>
+                                <a href="./stained-glass.html">Витражи</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-string">
+                        <ul class="links-block">
+                            <h6>Аксессуары</h6>
+                            <li>
+                                <a href="./mosquito.html">Москитные сетки</a>
+                            </li>
+                            <li>
+                                <a href="./sills.html">Подоконники</a>
+                            </li>
+                        </ul>
+                        <ul class="links-block second-block">
+                            <h6>О нас</h6>
+                            <li>
+                                <a href="./production.html">Наше производство</a>
+                            </li>
+                            <li>
+                                <a href="./offices.html">Офисы продаж</a>
+                            </li>
+                        </ul>
+                        <ul class="links-block">
+                            <a class="white-color" href="./works.html">
+                                <h6>Наши работы</h6>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="./js/sctipt.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.sliders').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+    });
+    var swiper3 = new Swiper(".mySwiper3", {
+        cssMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+        touch: true
+    });
+
+    var swiper4 = new Swiper(".mySwiper4", {
+        cssMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+
+    var swiper5 = new Swiper(".mySwiper5", {
+        cssMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+</script>
+
+</html>

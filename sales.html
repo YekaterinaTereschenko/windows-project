@@ -11,6 +11,26 @@
 </head>
 
 <body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="help-card order" id="modal-block">
+                <h5>Оставьте заявку</h5>
+                <div class="input-block">
+                    <label for="order-input">Номер телефона</label>
+                    <input type="text" id="order-input" value="+7">
+                </div>
+                <button class="order-btnn" id="modal-btn-1">Заказать звонок</button>
+            </div>
+            <div class="help-card order" id="modal-block-hide" style="display: none;">
+                <div class="head">
+                    <img src="./images/rocket-icon.svg" alt="">
+                    <h3>Заявка успешно отправлена!</h3>
+                </div>
+                <p>Менеджер перезвонит вам в ближайшее время</p>
+                <button id="close-modal">Готово</button>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <header class="header desc">
             <div class="content">
@@ -63,12 +83,12 @@
                                 <button class="dropdown-btn">О нас
                                     <img src="./images/CaretDown.svg" alt="">
                                     <ul class="dropdown-content">
-                                        <li><a href="./works.html">Наше производство</a></li>
+                                        <li><a href="./production.html">Наше производство</a></li>
                                         <li><a href="./offices.html">Офисы продаж</a></li>
                                     </ul>
                                 </button>
                             </li>
-                            <li><a href="#">Наши работы</a></li>
+                            <li><a href="./works.html">Наши работы</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -83,8 +103,75 @@
                 <img src="./images/menu.svg" alt="">
             </button>
         </header>
+
+        <aside class="burger-menu" style="display: none;">
+            <ul>
+                <li><a href="./sales.html">Акции</a></li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            Окна
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./apartment.html">В квартиру</a></li>
+                            <li><a href="./dacha.html">На дачу</a></li>
+                            <li><a href="./cottage.html">В коттедж</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            Портальное остекление
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./portal.html">Порталы</a></li>
+                            <li><a href="./stained-glass.html">Витражи</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            Аксессуары
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./mosquito.html">Москитные сетки</a></li>
+                            <li><a href="./sills.html">Подоконники</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            О нас
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./production.html">Наше производство</a></li>
+                            <li><a href="./offices.html">Офисы продаж</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li><a href="./works.html">Наши работы</a></li>
+            </ul>
+            <div class="bottom">
+                <p>Производство в г. Ставрополь, ул. Мира, 1Б</p>
+                <div class="mob btns-contact">
+                    <a class="call-btn" href="tel:+79624467397">Позвонить</a>
+                    <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                        <img src="./images/WhatsappLogo (1).svg" alt="">
+                        Написать в WhatsApp
+                    </a>
+                    <a class="order-btn openModal">Заказать звонок</a>
+                </div>
+            </div>
+        </aside>
         <!--  -->
-        <section class="sales">
+        <section class="sales sales-mob">
             <div class="content">
                 <div class="sales-head">
                     <h3>Скидки и акции</h3>
@@ -122,7 +209,7 @@
                     <h5>Оставьте заявку</h5>
                     <div class="input-block">
                         <label for="order-btn">Номер телефона</label>
-                        <input type="text" id="order-btn" placeholder="+7">
+                        <input type="text" id="order-btn" value="+7">
                     </div>
                     <button>Заказать бесплатный замер</button>
                 </div>
@@ -142,14 +229,23 @@
                 <div class="footer-contact">
                     <div class="footer-contact-top">
                         <img src="./images/Frame 7 (1).svg" alt="">
-                        <p>Производство в <br>г. Ставрополь, <br> ул. Мира, 1Б</p>
+                        <p class="desc">Производство в <br>г. Ставрополь, <br> ул. Мира, 1Б</p>
+                        <p class="mob">Производство в <br>г. Ставрополь, ул. Мира, 1Б</p>
                     </div>
                     <div class="footer-contact-bottom">
-                        <p>+7-962-446-73-97</p>
-                        <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                        <p class="desc">+7-962-446-73-97</p>
+                        <a class="whatsapp-btn desc" href="https://wa.me/79624467397">
                             <img src="./images/WhatsappLogo.svg" alt="">
                             WhatsApp
                         </a>
+                        <div class="mob btns-contact">
+                            <a class="call-btn" href="tel:+79624467397">Позвонить</a>
+                            <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                                <img src="./images/WhatsappLogo (1).svg" alt="">
+                                Написать в WhatsApp
+                            </a>
+                            <a class="order-btn openModal">Заказать звонок</a>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -157,34 +253,34 @@
                         <ul class="links-block">
                             <h6>Акции</h6>
                             <li>
-                                <a href="">Скидка -10% в честь дня рождения компании</a>
+                                <a href="#">Скидка -10% в честь дня рождения компании</a>
                             </li>
                             <li>
-                                <a href="">Бесплатная установка</a>
+                                <a href="#">Бесплатная установка</a>
                             </li>
                             <li>
-                                <a href="">Теплый балкон от 6500 ₽ за кв. м.</a>
+                                <a href="#">Теплый балкон от 6500 ₽ за кв. м.</a>
                             </li>
                         </ul>
                         <ul class="links-block second-block">
                             <h6>Окна</h6>
                             <li>
-                                <a href="">В квартиру</a>
+                                <a href="./apartment.html">В квартиру</a>
                             </li>
                             <li>
-                                <a href="">На дачу</a>
+                                <a href="./dacha.html">На дачу</a>
                             </li>
                             <li>
-                                <a href="">В коттедж</a>
+                                <a href="./cottage.html">В коттедж</a>
                             </li>
                         </ul>
                         <ul class="links-block">
                             <h6>Портальное остекление</h6>
                             <li>
-                                <a href="">Порталы</a>
+                                <a href="./portal.html">Порталы</a>
                             </li>
                             <li>
-                                <a href="">Витражи</a>
+                                <a href="./stained-glass.html">Витражи</a>
                             </li>
                         </ul>
                     </div>
@@ -192,23 +288,25 @@
                         <ul class="links-block">
                             <h6>Аксессуары</h6>
                             <li>
-                                <a href="">Москитные сетки</a>
+                                <a href="./mosquito.html">Москитные сетки</a>
                             </li>
                             <li>
-                                <a href="">Подоконники</a>
+                                <a href="./sills.html">Подоконники</a>
                             </li>
                         </ul>
                         <ul class="links-block second-block">
                             <h6>О нас</h6>
                             <li>
-                                <a href="./works.html">Наше производство</a>
+                                <a href="./production.html">Наше производство</a>
                             </li>
                             <li>
                                 <a href="./offices.html">Офисы продаж</a>
                             </li>
                         </ul>
                         <ul class="links-block">
-                            <h6>Наши работы</h6>
+                            <a class="white-color" href="./works.html">
+                                <h6>Наши работы</h6>
+                            </a>
                         </ul>
                     </div>
                 </div>
@@ -217,7 +315,6 @@
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./js/sliders.js"></script>
 <script src="./js/sctipt.js"></script>
 
 </html>

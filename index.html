@@ -7,10 +7,32 @@
     <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/dist/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <title>Оконцево</title>
 </head>
 
 <body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="help-card order" id="modal-block">
+                <h5>Оставьте заявку</h5>
+                <div class="input-block">
+                    <label for="order-input">Номер телефона</label>
+                    <input type="text" id="order-input" value="+7">
+                </div>
+                <button class="order-btnn" id="modal-btn-1">Заказать звонок</button>
+            </div>
+            <div class="help-card order" id="modal-block-hide" style="display: none;">
+                <div class="head">
+                    <img src="./images/rocket-icon.svg" alt="">
+                    <h3>Заявка успешно отправлена!</h3>
+                </div>
+                <p>Менеджер перезвонит вам в ближайшее время</p>
+                <button id="close-modal">Готово</button>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <header class="header desc">
             <div class="content">
@@ -63,12 +85,12 @@
                                 <button class="dropdown-btn">О нас
                                     <img src="./images/CaretDown.svg" alt="">
                                     <ul class="dropdown-content">
-                                        <li><a href="./works.html">Наше производство</a></li>
+                                        <li><a href="./production.html">Наше производство</a></li>
                                         <li><a href="./offices.html">Офисы продаж</a></li>
                                     </ul>
                                 </button>
                             </li>
-                            <li><a href="#">Наши работы</a></li>
+                            <li><a href="./works.html">Наши работы</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -83,6 +105,73 @@
                 <img src="./images/menu.svg" alt="">
             </button>
         </header>
+
+        <aside class="burger-menu" style="display: none;">
+            <ul>
+                <li><a href="./sales.html">Акции</a></li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            Окна
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./apartment.html">В квартиру</a></li>
+                            <li><a href="./dacha.html">На дачу</a></li>
+                            <li><a href="./cottage.html">В коттедж</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            Портальное остекление
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./portal.html">Порталы</a></li>
+                            <li><a href="./stained-glass.html">Витражи</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            Аксессуары
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./mosquito.html">Москитные сетки</a></li>
+                            <li><a href="./sills.html">Подоконники</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li>
+                    <button class="dropdown-btn-mob">
+                        <div class="button-content">
+                            О нас
+                            <img src="./images/CaretDown.svg" alt="">
+                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="./production.html">Наше производство</a></li>
+                            <li><a href="./offices.html">Офисы продаж</a></li>
+                        </ul>
+                    </button>
+                </li>
+                <li><a href="./works.html">Наши работы</a></li>
+            </ul>
+            <div class="bottom">
+                <p>Производство в г. Ставрополь, ул. Мира, 1Б</p>
+                <div class="mob btns-contact">
+                    <a class="call-btn" href="tel:+79624467397">Позвонить</a>
+                    <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                        <img src="./images/WhatsappLogo (1).svg" alt="">
+                        Написать в WhatsApp
+                    </a>
+                    <a class="order-btn openModal">Заказать звонок</a>
+                </div>
+            </div>
+        </aside>
         <!--  -->
         <section class="slider">
             <div class="content">
@@ -92,19 +181,20 @@
                             <div class="slide-text">
                                 <div class="slide-text-content">
                                     <h3>Система “Теплый край” по цене обычного стеклопакета</h3>
+                                    <img src="./images/cheerful_healthy_baby_smiling_portrait_small_child_boy_little_son 1.svg" class="mob" alt="">
                                     <ul>
                                         <li>&bull; исключает появления конденсата вдоль кромок стекла</li>
                                         <li>&bull; эффективное средство защиты от холода</li>
                                         <li>&bull; превосходные показатели теплоизоляции и внешнего вида</li>
                                     </ul>
                                 </div>
-                                <div class="btns">
+                                <div class="btns desc">
                                     <a class="call-btn" href="tel:+79624467397">Позвонить</a>
                                     <a class="whatsapp-btn" href="https://wa.me/79624467397">
                                         <img src="./images/WhatsappLogo (1).svg" alt="">
                                         Написать в WhatsApp
                                     </a>
-                                    <a class="order-btn" href="#">Заказать звонок</a>
+                                    <a class="order-btn openModal">Заказать звонок</a>
                                 </div>
                             </div>
                         </div>
@@ -112,19 +202,20 @@
                             <div class="slide-text">
                                 <div class="slide-text-content">
                                     <h3>Система “Теплый край” по цене обычного стеклопакета</h3>
+                                    <img src="./images/cheerful_healthy_baby_smiling_portrait_small_child_boy_little_son 1.svg" class="mob" alt="">
                                     <ul>
                                         <li>&bull; исключает появления конденсата вдоль кромок стекла</li>
                                         <li>&bull; эффективное средство защиты от холода</li>
                                         <li>&bull; превосходные показатели теплоизоляции и внешнего вида</li>
                                     </ul>
                                 </div>
-                                <div class="btns">
+                                <div class="btns desc">
                                     <a class="call-btn" href="tel:+79624467397">Позвонить</a>
                                     <a class="whatsapp-btn" href="https://wa.me/79624467397">
                                         <img src="./images/WhatsappLogo (1).svg" alt="">
                                         Написать в WhatsApp
                                     </a>
-                                    <a class="order-btn" href="#">Заказать звонок</a>
+                                    <a class="order-btn openModal">Заказать звонок</a>
                                 </div>
                             </div>
                         </div>
@@ -132,19 +223,20 @@
                             <div class="slide-text">
                                 <div class="slide-text-content">
                                     <h3>Система “Теплый край” по цене обычного стеклопакета</h3>
+                                    <img src="./images/cheerful_healthy_baby_smiling_portrait_small_child_boy_little_son 1.svg" class="mob" alt="">
                                     <ul>
                                         <li>&bull; исключает появления конденсата вдоль кромок стекла</li>
                                         <li>&bull; эффективное средство защиты от холода</li>
                                         <li>&bull; превосходные показатели теплоизоляции и внешнего вида</li>
                                     </ul>
                                 </div>
-                                <div class="btns">
+                                <div class="btns desc">
                                     <a class="call-btn" href="tel:+79624467397">Позвонить</a>
                                     <a class="whatsapp-btn" href="https://wa.me/79624467397">
                                         <img src="./images/WhatsappLogo (1).svg" alt="">
                                         Написать в WhatsApp
                                     </a>
-                                    <a class="order-btn" href="#">Заказать звонок</a>
+                                    <a class="order-btn openModal">Заказать звонок</a>
                                 </div>
                             </div>
                         </div>
@@ -154,6 +246,14 @@
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-next"></div>
                     </div>
+                </div>
+                <div class="btns mob">
+                    <a class="call-btn" href="tel:+79624467397">Позвонить</a>
+                    <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                        <img src="./images/WhatsappLogo (1).svg" alt="">
+                        Написать в WhatsApp
+                    </a>
+                    <a class="order-btn openModal">Заказать звонок</a>
                 </div>
             </div>
         </section>
@@ -165,57 +265,75 @@
                     <div class="calc-block">
                         <div class="head">
                             <button class="active-btn" onclick="toggleButton(this)">
-                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 5.26855C6.75 4.30205 7.5335 3.51855 8.5 3.51855H31.5C32.4665 3.51855 33.25 4.30206 33.25 5.26855V35.2686C33.25 36.2351 32.4665 37.0186 31.5 37.0186H8.5C7.5335 37.0186 6.75 36.2351 6.75 35.2686V5.26855ZM9.25 6.01855V34.5186H30.75V6.01855H9.25Z" fill="#1B1D1F"/>
-                                    </svg>
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.75 5.26855C6.75 4.30205 7.5335 3.51855 8.5 3.51855H31.5C32.4665 3.51855 33.25 4.30206 33.25 5.26855V35.2686C33.25 36.2351 32.4665 37.0186 31.5 37.0186H8.5C7.5335 37.0186 6.75 36.2351 6.75 35.2686V5.26855ZM9.25 6.01855V34.5186H30.75V6.01855H9.25Z"
+                                        fill="#1B1D1F" />
+                                </svg>
                                 <p>Одностворчатое окно</p>
                             </button>
                             <button onclick="toggleButton(this)">
-                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 6.01855V34.5186H18.75V6.01855H5.75ZM21.25 6.01855V34.5186H34.25V6.01855H21.25ZM3.25 5.26855C3.25 4.30205 4.0335 3.51855 5 3.51855H35C35.9665 3.51855 36.75 4.30206 36.75 5.26855V35.2686C36.75 36.2351 35.9665 37.0186 35 37.0186H5C4.0335 37.0186 3.25 36.2351 3.25 35.2686V5.26855Z" fill="#A0A6AD"/>
-                                    </svg>
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.75 6.01855V34.5186H18.75V6.01855H5.75ZM21.25 6.01855V34.5186H34.25V6.01855H21.25ZM3.25 5.26855C3.25 4.30205 4.0335 3.51855 5 3.51855H35C35.9665 3.51855 36.75 4.30206 36.75 5.26855V35.2686C36.75 36.2351 35.9665 37.0186 35 37.0186H5C4.0335 37.0186 3.25 36.2351 3.25 35.2686V5.26855Z"
+                                        fill="#A0A6AD" />
+                                </svg>
                                 <p>Двухстворчатое окно</p>
                             </button>
                             <button onclick="toggleButton(this)">
-                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 6.01855V34.5186H13.25V6.01855H5.75ZM15.75 6.01855V34.5186H23.75V6.01855H15.75ZM26.25 6.01855V34.5186H34.25V6.01855H26.25ZM3.25 5.26855C3.25 4.30205 4.0335 3.51855 5 3.51855H35C35.9665 3.51855 36.75 4.30206 36.75 5.26855V35.2686C36.75 36.2351 35.9665 37.0186 35 37.0186H5C4.0335 37.0186 3.25 36.2351 3.25 35.2686V5.26855Z" fill="#A0A6AD"/>
-                                    </svg>
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.75 6.01855V34.5186H13.25V6.01855H5.75ZM15.75 6.01855V34.5186H23.75V6.01855H15.75ZM26.25 6.01855V34.5186H34.25V6.01855H26.25ZM3.25 5.26855C3.25 4.30205 4.0335 3.51855 5 3.51855H35C35.9665 3.51855 36.75 4.30206 36.75 5.26855V35.2686C36.75 36.2351 35.9665 37.0186 35 37.0186H5C4.0335 37.0186 3.25 36.2351 3.25 35.2686V5.26855Z"
+                                        fill="#A0A6AD" />
+                                </svg>
                                 <p>Трёхстворчатое окно</p>
                             </button>
                             <button onclick="toggleButton(this)">
-                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 6.01855V34.5186H13.25V6.01855H5.75ZM15.75 6.01855V34.5186H23.75V6.01855H15.75ZM26.25 6.01855V34.5186H34.25V6.01855H26.25ZM3.25 5.26855C3.25 4.30205 4.0335 3.51855 5 3.51855H35C35.9665 3.51855 36.75 4.30206 36.75 5.26855V35.2686C36.75 36.2351 35.9665 37.0186 35 37.0186H5C4.0335 37.0186 3.25 36.2351 3.25 35.2686V5.26855Z" fill="#A0A6AD"/>
-                                    </svg>
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.75 6.01855V34.5186H13.25V6.01855H5.75ZM15.75 6.01855V34.5186H23.75V6.01855H15.75ZM26.25 6.01855V34.5186H34.25V6.01855H26.25ZM3.25 5.26855C3.25 4.30205 4.0335 3.51855 5 3.51855H35C35.9665 3.51855 36.75 4.30206 36.75 5.26855V35.2686C36.75 36.2351 35.9665 37.0186 35 37.0186H5C4.0335 37.0186 3.25 36.2351 3.25 35.2686V5.26855Z"
+                                        fill="#A0A6AD" />
+                                </svg>
                                 <p>Балкон. Одностворчатое окно</p>
                             </button>
                             <button onclick="toggleButton(this)">
-                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.25 6.01855V34.5186H17.25V6.01855H4.25ZM19.75 6.01855V21.0186H26.25V6.01855H19.75ZM28.75 6.01855V21.0186H35.25V6.01855H28.75ZM19.75 23.5186H36C36.9665 23.5186 37.75 22.7351 37.75 21.7686V5.26855C37.75 4.30206 36.9665 3.51855 36 3.51855H3.5C2.5335 3.51855 1.75 4.30205 1.75 5.26855V35.2686C1.75 36.2351 2.5335 37.0186 3.5 37.0186H18C18.9665 37.0186 19.75 36.2351 19.75 35.2686V23.5186Z" fill="#A0A6AD"/>
-                                    </svg>
-                                    
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M4.25 6.01855V34.5186H17.25V6.01855H4.25ZM19.75 6.01855V21.0186H26.25V6.01855H19.75ZM28.75 6.01855V21.0186H35.25V6.01855H28.75ZM19.75 23.5186H36C36.9665 23.5186 37.75 22.7351 37.75 21.7686V5.26855C37.75 4.30206 36.9665 3.51855 36 3.51855H3.5C2.5335 3.51855 1.75 4.30205 1.75 5.26855V35.2686C1.75 36.2351 2.5335 37.0186 3.5 37.0186H18C18.9665 37.0186 19.75 36.2351 19.75 35.2686V23.5186Z"
+                                        fill="#A0A6AD" />
+                                </svg>
+
                                 <p>Балкон. Двухстворчатое окно</p>
                             </button>
                         </div>
                         <div class="selector">
                             <h5>Ширина окна, mm</h5>
-                            <div class="selector-content">
+                            <div class="selector-content desc">
                                 <div class="select">
-                                    <input type="range" name="" id="widthRange" min="700" max="1000">
+                                    <input type="range" name="" id="widthRange" min="700" max="1000" value="800">
                                     <div class="text">
                                         <span>700</span>
                                         <span>1000</span>
                                     </div>
                                 </div>
                                 <div class="value" id="widthValue">
-                                    <span>850</span>
+                                    <span>800</span>
                                 </div>
+                            </div>
+                            <div class="mob input-value">
+                                <input id="widthInput" type="number" value="800" placeholder="Введите размер">
                             </div>
                         </div>
                         <div class="selector">
                             <h5>Высота, mm</h5>
-                            <div class="selector-content">
+                            <div class="selector-content desc">
                                 <div class="select">
-                                    <input type="range" name="" id="heightRange" min="1000" max="1500">
+                                    <input type="range" name="" id="heightRange" min="1000" max="1500" value="1250">
                                     <div class="text">
                                         <span>1000</span>
                                         <span>1500</span>
@@ -224,6 +342,9 @@
                                 <div class="value" id="heightValue">
                                     <span>1250</span>
                                 </div>
+                            </div>
+                            <div class="mob input-value">
+                                <input id="heightInput" type="number" value="1250" placeholder="Введите размер">
                             </div>
                         </div>
                         <div class="selector">
@@ -249,13 +370,13 @@
                             <h5>Установка</h5>
                             <form id="installation">
                                 <div class="form_radio_btn">
-                                    <input type="radio" id="option4" name="answer" value="2000">
-                                    <label for="option4">Да</label>
-                                </div>
-
-                                <div class="form_radio_btn">
                                     <input type="radio" id="option5" name="answer" value="0">
                                     <label for="option5">Нет</label>
+                                </div>
+                                
+                                <div class="form_radio_btn">
+                                    <input type="radio" id="option4" name="answer" value="2000">
+                                    <label for="option4">Да</label>
                                 </div>
                             </form>
                         </div>
@@ -277,7 +398,8 @@
                     <div class="price-blocks">
                         <div class="price-blocks-bg">
                             <h4 class="desc">Примерная стоимость</h4>
-                            <p class="desc">Ознакомительный расчет. Итоговая стоимость будет известна после замера нашими инженерами
+                            <p class="desc">Ознакомительный расчет. Итоговая стоимость будет известна после замера
+                                нашими инженерами
                             </p>
                             <div class="price-blocks-string">
                                 <div class="block" id="">
@@ -316,7 +438,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a id="take-size" href="">Заказать бесплатный замер</a>
+                        <a id="take-size" class="openModal">Заказать бесплатный замер</a>
                     </div>
                 </div>
             </div>
@@ -406,7 +528,7 @@
                                 <strong>TOPLINE 58</strong>
                             </div>
                             <p>1300×1400</p>
-                            <span>от <strong class="card-price">4 500 ₽</strong></span>
+                            <span>от <strong class="card-price">4 800 ₽</strong></span>
                         </div>
                     </a>
                     <a class="catalog-card" href="#">
@@ -435,7 +557,7 @@
                                 <strong>TOPLINE 58</strong>
                             </div>
                             <p>1300×1400</p>
-                            <span>от <strong class="card-price">4 500 ₽</strong></span>
+                            <span>от <strong class="card-price">5 600 ₽</strong></span>
                         </div>
                     </a>
                     <a class="catalog-card" href="#">
@@ -464,7 +586,7 @@
                                 <strong>TOPLINE 58</strong>
                             </div>
                             <p>1300×1400</p>
-                            <span>от <strong class="card-price">4 500 ₽</strong></span>
+                            <span>от <strong class="card-price">7 000 ₽</strong></span>
                         </div>
                     </a>
                 </div>
@@ -556,10 +678,10 @@
                 <div class="help-card phone">
                     <h5>Или свяжитесь <br> с менеджером</h5>
                     <a href="tel:+79624467397">+7 962 446 73 97</button>
-                    <a href="https://wa.me/79624467397">
-                        <img class="desc" src="./images/WhatsappLogo (1).svg" alt="">
-                        Написать в WhatsApp
-                    </a>
+                        <a href="https://wa.me/79624467397">
+                            <img class="desc" src="./images/WhatsappLogo (1).svg" alt="">
+                            Написать в WhatsApp
+                        </a>
                 </div>
             </div>
         </section>
@@ -604,7 +726,7 @@
             <div class="content">
                 <h3>Наши работы</h3>
                 <div class="gallery-blocks">
-                    <div class="swiper2 mySwiper3">
+                    <div class="swiper2 mySwiper3 desc">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide group-option">
                                 <img src="./images/gallery/image 24 (1).png" alt="">
@@ -643,6 +765,16 @@
                             <div class="swiper-button-next"></div>
                         </div>
                     </div>
+                    <div class="sliders mob">
+                        <div><img src="./images/gallery/image 24 (1).png" alt="Slide 1"></div>
+                        <div><img src="./images/gallery/image 24.png" alt="Slide 2"></div>
+                        <div><img src="./images/gallery/image 25 (1).png" alt="Slide 3"></div>
+                        <div><img src="./images/gallery/image 25.png" alt="Slide 3"></div>
+                        <div><img src="./images/gallery/image 26.png" alt="Slide 3"></div>
+                        <div><img src="./images/gallery/image 26 (1).png" alt="Slide 3"></div>
+                        <div><img src="./images/gallery/image 45.png" alt="Slide 3"></div>
+                        <div><img src="./images/gallery/image 24 (1).png" alt="Slide 3"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -654,7 +786,7 @@
                     <h5>Оставьте заявку</h5>
                     <div class="input-block">
                         <label for="order-btn">Номер телефона</label>
-                        <input type="text" id="order-btn" placeholder="+7">
+                        <input type="text" id="order-btn" value="+7">
                     </div>
                     <button id="take-size2">Заказать бесплатный замер</button>
                 </div>
@@ -674,14 +806,23 @@
                 <div class="footer-contact">
                     <div class="footer-contact-top">
                         <img src="./images/Frame 7 (1).svg" alt="">
-                        <p>Производство в <br>г. Ставрополь, <br> ул. Мира, 1Б</p>
+                        <p class="desc">Производство в <br>г. Ставрополь, <br> ул. Мира, 1Б</p>
+                        <p class="mob">Производство в <br>г. Ставрополь, ул. Мира, 1Б</p>
                     </div>
                     <div class="footer-contact-bottom">
-                        <p>+7-962-446-73-97</p>
-                        <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                        <p class="desc">+7-962-446-73-97</p>
+                        <a class="whatsapp-btn desc" href="https://wa.me/79624467397">
                             <img src="./images/WhatsappLogo.svg" alt="">
                             WhatsApp
                         </a>
+                        <div class="mob btns-contact">
+                            <a class="call-btn" href="tel:+79624467397">Позвонить</a>
+                            <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                                <img src="./images/WhatsappLogo (1).svg" alt="">
+                                Написать в WhatsApp
+                            </a>
+                            <a class="order-btn openModal">Заказать звонок</a>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -701,22 +842,22 @@
                         <ul class="links-block second-block">
                             <h6>Окна</h6>
                             <li>
-                                <a href="">В квартиру</a>
+                                <a href="./apartment.html">В квартиру</a>
                             </li>
                             <li>
-                                <a href="">На дачу</a>
+                                <a href="./dacha.html">На дачу</a>
                             </li>
                             <li>
-                                <a href="">В коттедж</a>
+                                <a href="./cottage.html">В коттедж</a>
                             </li>
                         </ul>
                         <ul class="links-block">
                             <h6>Портальное остекление</h6>
                             <li>
-                                <a href="">Порталы</a>
+                                <a href="./portal.html">Порталы</a>
                             </li>
                             <li>
-                                <a href="">Витражи</a>
+                                <a href="./stained-glass.html">Витражи</a>
                             </li>
                         </ul>
                     </div>
@@ -724,23 +865,25 @@
                         <ul class="links-block">
                             <h6>Аксессуары</h6>
                             <li>
-                                <a href="">Москитные сетки</a>
+                                <a href="./mosquito.html">Москитные сетки</a>
                             </li>
                             <li>
-                                <a href="">Подоконники</a>
+                                <a href="./sills.html">Подоконники</a>
                             </li>
                         </ul>
                         <ul class="links-block second-block">
                             <h6>О нас</h6>
                             <li>
-                                <a href="./works.html">Наше производство</a>
+                                <a href="./production.html">Наше производство</a>
                             </li>
                             <li>
                                 <a href="./offices.html">Офисы продаж</a>
                             </li>
                         </ul>
                         <ul class="links-block">
-                            <h6>Наши работы</h6>
+                            <a class="white-color" href="./works.html">
+                                <h6>Наши работы</h6>
+                            </a>
                         </ul>
                     </div>
                 </div>
@@ -749,9 +892,21 @@
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./js/sliders.js"></script>
 <script src="./js/sctipt.js"></script>
+<script src="./js/calc.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
+        $(document).ready(function () {
+        $('.sliders').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+    });
+
     var swiper = new Swiper(".mySwiper", {
         cssMode: true,
         navigation: {
