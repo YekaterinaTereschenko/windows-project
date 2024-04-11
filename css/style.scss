@@ -397,7 +397,7 @@ body {
                         height: 1em;
                         flex-shrink: 0;
                         flex-grow: 0;
-                        border: 1px solid #adb5bd;
+                        border: 3px solid #adb5bd;
                         border-radius: 0.25em;
                         margin-right: 0.5em;
                         background-repeat: no-repeat;
@@ -409,6 +409,7 @@ body {
                         border-color: rgba(255, 255, 255, 1);
                         background-color: rgba(255, 255, 255, 1);
                         background-image: url("../../images/calc/check.svg");
+                        background-size: 80%;
                     }
 
                     .custom-checkbox:checked+label {
@@ -882,12 +883,14 @@ body {
             button {
                 border-radius: 12px;
                 border: 0;
-                padding: 12px 24px;
+                padding: 12px 0px;
                 font-size: 20px;
                 font-weight: 600;
                 line-height: 28px;
                 text-align: center;
                 color: white;
+                background-color: #ffa85e;
+
             }
 
             .input-block {
@@ -1067,6 +1070,12 @@ body {
                 display: flex;
                 flex-direction: column;
                 gap: 28px;
+
+                &-tel {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
             }
         }
 
@@ -1555,6 +1564,103 @@ body {
         display: flex !important;
     }
 
+    .slider {
+        .slick-dots li.slick-active button::before {
+            color: rgb(79, 205, 213) !important;
+        }
+
+        .sliderss {
+            width: 100%;
+            margin: 0 auto;
+
+        }
+        h3 {
+            line-height: 26px !important;
+        }
+
+        .sliderss img {
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        .slick-prev,
+        .slick-next {
+            padding: 0 20px !important;
+            border-radius: 12px !important;
+            background: #eaf9fa !important;
+            height: 46px !important;
+            width: 96px !important;
+            position: static !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slick-next:before {
+            content: '' !important;
+            background-image: url('../../images/Vector.svg');
+            width: 20px;
+            height: 20px;
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #4fcdd5 !important;
+        }
+
+        .slick-prev:before {
+            content: '' !important;
+            background-image: url('../../images/Vector2.svg');
+            width: 20px;
+            height: 20px;
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #4fcdd5 !important;
+        }
+
+        .mini-btns {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+
+        .slick-next {
+            right: 0;
+        }
+
+        .slick-dots {
+            text-align: center;
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            bottom: -60px !important;
+        }
+
+        .slick-dots li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .slick-dots li button {
+            font-size: 0;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .slick-dots li button::before {
+            content: "•";
+            font-size: 12px;
+            color: #ccc;
+        }
+    }
+
     .burger-menu {
         flex-direction: column;
         height: 88vh;
@@ -1710,7 +1816,7 @@ body {
         }
 
         h3 {
-            margin-bottom: 50px !important;
+            margin-bottom: 20px !important;
         }
 
         .swiper-slide {
@@ -1729,13 +1835,16 @@ body {
             height: min-content !important;
         }
 
-        .slick-slide img {
-            width: 100% !important;
+        .slick-arrow {
+            display: none !important;
         }
 
         .slick-slide {
-            width: 354px !important;
-            margin: 0 10px;
+            margin-right: 20px;
+        }
+
+        .slick-slide img {
+            width: 100% !important;
         }
 
         .swiper-wrapper {
@@ -1920,6 +2029,10 @@ body {
         }
     }
 
+    input {
+        font-size: 20px !important;
+    }
+
     .calc {
         padding: 0 !important;
 
@@ -1988,7 +2101,7 @@ body {
                     }
 
                     .form_radio_btn label {
-                        padding: 12px 11px !important;
+                        padding: 12px 0px !important;
                         border: 0 !important;
                         border-left: 1px solid rgba(255, 186, 128, 1) !important;
                         border-right: 1px solid rgba(255, 186, 128, 1) !important;
@@ -2004,14 +2117,35 @@ body {
                     #options {
                         flex-direction: column;
                         border: 0;
+                        gap: 4px !important;
 
                         label {
                             background-color: transparent !important;
-                            width: 60%;
+                            width: 50%;
                             margin: auto;
+                        }
+
+                        .custom-checkbox+label {
+                            padding: 13px 8px !important;
                         }
                     }
                 }
+
+                .custom-checkbox:checked+label::before {
+                    // border-color: rgba(160, 166, 173, 1) !important;
+                    border: 2px solid rgba(160, 166, 173, 1) !important;
+                    background-color: #fff !important;
+                }
+
+                .custom-checkbox:checked+label::before {
+                    border-color: #ffba80 !important;
+                    background-color: #ffba80 !important;
+                    background-image: url("../../images/calc/Vector 1.svg") !important;
+                }
+            }
+
+            .price-blocks-string {
+                gap: 10px !important;
             }
 
             .size {
@@ -2095,7 +2229,7 @@ body {
     }
 
     .help-mar {
-        margin: 60px 0;
+        margin: 100px 0;
     }
 
     .advantages {
@@ -2118,9 +2252,24 @@ body {
     }
 
     .gallery {
+        padding: 100px 0 !important;
+
+        .content {
+            width: 100% !important;
+        }
+
+        h3 {
+            width: 90%;
+            margin: auto !important;
+            margin-bottom: 20px !important;
+        }
 
         .slick-list {
             height: min-content !important;
+        }
+
+        .slick-slide {
+            margin-right: 20px;
         }
 
         .slick-slide img {

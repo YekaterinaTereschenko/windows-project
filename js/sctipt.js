@@ -71,7 +71,11 @@ burgerBtn.forEach(button => {
 // ==========================================================================
 // ЗАПОЛНЕНИЕ ФОРМЫ
 const orderInput = document.querySelector('#order-input'); 
+const orderInput2 = document.querySelector('#order-inputt'); 
+const orderInput3 = document.querySelector('#order-inputs'); 
 const orderBtn = document.querySelector('.order-btnn');
+const orderBtn2 = document.querySelector('.order-btn2');
+const orderBtn3 = document.querySelector('#take-size2');
 const modalBlock = document.getElementById('modal-block')
 const modalBlockHide = document.getElementById('modal-block-hide')
 const closeModal = document.getElementById('close-modal')
@@ -80,14 +84,30 @@ if(orderInput) {
     orderInput.addEventListener('input', function() {
         if (orderInput.value.length <= 2) {
             orderBtn.style.background = 'rgba(160, 166, 173, 1)';
-            orderBtn.setAttribute('disabled', '');
         } else {
             orderBtn.style.background = 'rgba(44, 177, 185, 1)';
-            orderBtn.removeAttribute('disabled');
             orderBtn.addEventListener('click', () => {
                 modalBlock.style.display = 'none'
                 modalBlockHide.style.display = 'flex'
             })
+        }
+    });
+}
+if(orderInput2) {
+    orderInput2.addEventListener('input', function() {
+        if (orderInput2.value.length <= 2) {
+            orderBtn2.style.background = 'rgba(160, 166, 173, 1)';
+        } else {
+            orderBtn2.style.background = 'rgba(44, 177, 185, 1)';
+        }
+    });
+}
+if(orderInput3) {
+    orderInput3.addEventListener('input', function() {
+        if (orderInput3.value.length <= 2) {
+            orderBtn3.style.background = 'rgba(160, 166, 173, 1)';
+        } else {
+            orderBtn3.style.background = 'rgba(44, 177, 185, 1)';
         }
     });
 }
@@ -117,3 +137,12 @@ window.onclick = function(event) {
   }
 }
 
+
+// ===========================================================================
+// АДАПТИВ
+const takeSizes = document.getElementById('take-size2')
+const clienttWidth = document.documentElement.clientWidth;
+
+if (clienttWidth < 770) {
+    takeSizes.textContent = 'Бесплатный замер'
+}

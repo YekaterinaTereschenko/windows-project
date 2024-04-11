@@ -64,7 +64,11 @@ burgerBtn.forEach(function (button) {
 // ЗАПОЛНЕНИЕ ФОРМЫ
 
 var orderInput = document.querySelector('#order-input');
+var orderInput2 = document.querySelector('#order-inputt');
+var orderInput3 = document.querySelector('#order-inputs');
 var orderBtn = document.querySelector('.order-btnn');
+var orderBtn2 = document.querySelector('.order-btn2');
+var orderBtn3 = document.querySelector('#take-size2');
 var modalBlock = document.getElementById('modal-block');
 var modalBlockHide = document.getElementById('modal-block-hide');
 var closeModal = document.getElementById('close-modal');
@@ -73,14 +77,32 @@ if (orderInput) {
   orderInput.addEventListener('input', function () {
     if (orderInput.value.length <= 2) {
       orderBtn.style.background = 'rgba(160, 166, 173, 1)';
-      orderBtn.setAttribute('disabled', '');
     } else {
       orderBtn.style.background = 'rgba(44, 177, 185, 1)';
-      orderBtn.removeAttribute('disabled');
       orderBtn.addEventListener('click', function () {
         modalBlock.style.display = 'none';
         modalBlockHide.style.display = 'flex';
       });
+    }
+  });
+}
+
+if (orderInput2) {
+  orderInput2.addEventListener('input', function () {
+    if (orderInput2.value.length <= 2) {
+      orderBtn2.style.background = 'rgba(160, 166, 173, 1)';
+    } else {
+      orderBtn2.style.background = 'rgba(44, 177, 185, 1)';
+    }
+  });
+}
+
+if (orderInput3) {
+  orderInput3.addEventListener('input', function () {
+    if (orderInput3.value.length <= 2) {
+      orderBtn3.style.background = 'rgba(160, 166, 173, 1)';
+    } else {
+      orderBtn3.style.background = 'rgba(44, 177, 185, 1)';
     }
   });
 }
@@ -105,4 +127,13 @@ window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-};
+}; // ===========================================================================
+// АДАПТИВ
+
+
+var takeSizes = document.getElementById('take-size2');
+var clienttWidth = document.documentElement.clientWidth;
+
+if (clienttWidth < 770) {
+  takeSizes.textContent = 'Бесплатный замер';
+}

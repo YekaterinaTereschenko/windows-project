@@ -156,4 +156,5 @@ if (clientWidth < 770) {
   takeSize.textContent = 'Бесплатный замер';
   takeSize2.textContent = 'Бесплатный замер';
   orderBtn.textContent = 'Бесплатный замер';
+  orderBtn2.textContent = 'Бесплатный замер';
 }

@@ -42,8 +42,8 @@
                     </a>
                     <div class="header-top-text">
                         <p>Производство в г. Ставрополь, ул. Мира, 1Б</p>
-                        <a class="phone-btn" href="tel:+79624467397">+7-962-446-73-97</a>
-                        <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                        <a class="phone-btn" href="tel:+79009470288">+7 900 947-02-88</a>
+                        <a class="whatsapp-btn" href="https://wa.me/79009470288">
                             <img src="./images/WhatsappLogo.svg" alt="">
                             WhatsApp
                         </a>
@@ -161,10 +161,10 @@
                 <li><a href="./works.html">Наши работы</a></li>
             </ul>
             <div class="bottom">
-                <p>Производство в г. Ставрополь, ул. Мира, 1Б</p>
+                <p>г. Воронеж, Пешестрелецкая 121, офис 107</p>
                 <div class="mob btns-contact">
-                    <a class="call-btn" href="tel:+79624467397">Позвонить</a>
-                    <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                    <a class="call-btn" href="tel:+79009470288">Позвонить</a>
+                    <a class="whatsapp-btn" href="https://wa.me/79009470288">
                         <img src="./images/WhatsappLogo (1).svg" alt="">
                         Написать в WhatsApp
                     </a>
@@ -186,8 +186,8 @@
                             <li>&bull; Защита стены</li>
                         </ul>
                         <div class="btns">
-                            <a class="call-btn" href="tel:+79624467397">Позвонить</a>
-                            <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                            <a class="call-btn" href="tel:+79009470288">Позвонить</a>
+                            <a class="whatsapp-btn" href="https://wa.me/79009470288">
                                 <img src="./images/WhatsappLogo (1).svg" alt="">
                                 Написать в WhatsApp
                             </a>
@@ -299,14 +299,14 @@
                 <div class="help-card order">
                     <h5>Оставьте заявку</h5>
                     <div class="input-block">
-                        <label for="order-btn">Номер телефона</label>
-                        <input type="text" id="order-btn" value="+7">
+                        <label for="order-inputs">Номер телефона</label>
+                        <input type="text" id="order-inputs" value="+7">
                     </div>
-                    <button>Заказать бесплатный замер</button>
+                    <button id="take-size2">Заказать бесплатный замер</button>
                 </div>
                 <div class="help-card phone">
                     <h5>Или свяжитесь <br> с менеджером</h5>
-                    <button>+7 962 446 73 97</button>
+                    <button>+7 900 947-02-88</button>
                     <button>
                         <img src="./images/WhatsappLogo (1).svg" alt="">
                         Написать в WhatsApp
@@ -320,18 +320,21 @@
                 <div class="footer-contact">
                     <div class="footer-contact-top">
                         <img src="./images/Frame 7 (1).svg" alt="">
-                        <p class="desc">Производство в <br>г. Ставрополь, <br> ул. Мира, 1Б</p>
-                        <p class="mob">Производство в <br>г. Ставрополь, ул. Мира, 1Б</p>
+                        <p class="desc">г. Воронеж, <br> Пешестрелецкая 121, <br> офис 107 </p>
+                        <p class="mob">г. Воронеж, Пешестрелецкая <br> 121, офис 107 </p>
                     </div>
                     <div class="footer-contact-bottom">
-                        <p class="desc">+7-962-446-73-97</p>
-                        <a class="whatsapp-btn desc" href="https://wa.me/79624467397">
+                        <div class="footer-contact-bottom-tel desc">
+                            <p class="desc">+7 900 947-02-88</p>
+                            <p class="desc">+7 (4732) 2958521</p>
+                        </div>
+                        <a class="whatsapp-btn desc" href="https://wa.me/79009470288">
                             <img src="./images/WhatsappLogo.svg" alt="">
                             WhatsApp
                         </a>
                         <div class="mob btns-contact">
-                            <a class="call-btn" href="tel:+79624467397">Позвонить</a>
-                            <a class="whatsapp-btn" href="https://wa.me/79624467397">
+                            <a class="call-btn" href="tel:+79009470288">Позвонить</a>
+                            <a class="whatsapp-btn" href="https://wa.me/79009470288">
                                 <img src="./images/WhatsappLogo (1).svg" alt="">
                                 Написать в WhatsApp
                             </a>
@@ -416,7 +419,12 @@
             infinite: true,
             speed: 300,
             slidesToShow: 1,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            centerMode: true,
+            centerPadding: '790px', // Расстояние между активным слайдом и его соседями
+            focusOnSelect: true,
+            variableWidth: true,
+            edgeFriction: 0 // Уменьшение силы трения на краях слайдера для более плавного перелистывания
         });
     });
     var swiper3 = new Swiper(".mySwiper3", {
