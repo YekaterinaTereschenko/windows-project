@@ -6,6 +6,9 @@ var widthRange = document.getElementById('widthRange');
 var widthValue = document.getElementById('widthValue');
 var heightRange = document.getElementById('heightRange');
 var heightValue = document.getElementById('heightValue');
+var heightDoorRange = document.getElementById('heightDoorRange');
+var heightDoorValue = document.getElementById('heightDoorValue');
+var widthDoorRange = 700;
 var totalValue = document.getElementById('totalValue');
 var radioButtons = document.querySelectorAll('input[type="radio"]');
 var checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -28,18 +31,26 @@ var currentPrice3 = 5600;
 var currentPrice4 = 7000;
 var totalMeters;
 var widthInput = document.getElementById('widthInput');
-var heightInput = document.getElementById('heightInput'); // СУММА
+var heightInput = document.getElementById('heightInput');
+var heightDoorInput = document.getElementById('heightDoorInput');
+var balconySelectors = document.querySelectorAll('.balcony'); // СУММА
 
 function updateTotal(text, price) {
   var widthInMeters;
   var heightInMeters;
+  var heightDoorInMeters;
+  var widthDoorInMeters;
 
   if (clientWidth < 769) {
     widthInMeters = widthInput.value / 1000;
     heightInMeters = heightInput.value / 1000;
+    heightDoorInMeters = heightDoorInput.value / 1000;
+    widthDoorInMeters = widthDoorRange / 1000;
   } else {
     widthInMeters = widthRange.value / 1000;
     heightInMeters = heightRange.value / 1000;
+    heightDoorInMeters = heightDoorRange.value / 1000;
+    widthDoorInMeters = widthDoorRange / 1000;
   }
 
   var selectedLaminathia = laminathiaForm.querySelector('input[name="answer"]:checked');
@@ -51,7 +62,19 @@ function updateTotal(text, price) {
   checkboxes.forEach(function (checkbox) {
     selectedOptionsTotal += parseInt(checkbox.value);
   });
-  var total = widthInMeters * heightInMeters * parseInt(price) + parseInt(selectedLaminathiaValue) + parseInt(selectedInstallationValue) + parseInt(selectedOptionsTotal);
+  var balconySize;
+  balconySelectors.forEach(function (balconySelector) {
+    if (balconySelector.style.display == 'none') {
+      balconySize = 0;
+    } else {
+      heightDoorInMeters.value = 2000 / 1000;
+      widthDoorInMeters = 700 / 1000;
+      balconySize = heightDoorInMeters * widthDoorInMeters;
+    }
+  });
+  var windowSize = widthInMeters * heightInMeters;
+  var balconyAndWindowSize = windowSize + balconySize;
+  var total = balconyAndWindowSize * parseInt(price) + parseInt(selectedLaminathiaValue) + parseInt(selectedInstallationValue) + parseInt(selectedOptionsTotal);
   text.textContent = Math.round(total) + ' ₽';
 }
 
@@ -94,6 +117,27 @@ heightRange.addEventListener('input', function () {
 heightInput.addEventListener('input', function () {
   var heightInMeters = heightRange.value / 1000;
   heightValue.textContent = heightRange.value;
+  var widthInMeters = widthRange.value / 1000;
+  totalMeters = heightInMeters * widthInMeters;
+  updateTotal(standartPrice, currentPrice1);
+  updateTotal(comfortPrice, currentPrice2);
+  updateTotal(premiumPrice, currentPrice3);
+  updateTotal(plusPrice, currentPrice4);
+}); // ВЫСОТА ДВЕРИ
+
+heightDoorRange.addEventListener('input', function () {
+  var heightInMeters = heightDoorRange.value / 1000;
+  heightDoorValue.textContent = heightDoorRange.value;
+  var widthInMeters = widthRange.value / 1000;
+  totalMeters = heightInMeters * widthInMeters;
+  updateTotal(standartPrice, currentPrice1);
+  updateTotal(comfortPrice, currentPrice2);
+  updateTotal(premiumPrice, currentPrice3);
+  updateTotal(plusPrice, currentPrice4);
+});
+heightDoorInput.addEventListener('input', function () {
+  var heightInMeters = heightDoorRange.value / 1000;
+  heightDoorValue.textContent = heightDoorRange.value;
   var widthInMeters = widthRange.value / 1000;
   totalMeters = heightInMeters * widthInMeters;
   updateTotal(standartPrice, currentPrice1);
@@ -146,6 +190,26 @@ function toggleButton(button) {
   });
   button.classList.add('active-btn');
   button.querySelector('p').style.display = 'block';
+
+  if (button.querySelector('p').textContent == 'Балкон. Двухстворчатое окно' || button.querySelector('p').textContent == 'Балкон. Одностворчатое окно') {
+    balconySelectors.forEach(function (balconySelector) {
+      balconySelector.style.display = 'flex';
+      heightDoorRange.value = 2000;
+      widthDoorRange = 700;
+    });
+  } else {
+    balconySelectors.forEach(function (balconySelector) {
+      balconySelector.style.display = 'none';
+      heightDoorRange.value = 0;
+      heightDoorInput.value = 0;
+      widthDoorRange = 0;
+    });
+  }
+
+  updateTotal(standartPrice, currentPrice1);
+  updateTotal(comfortPrice, currentPrice2);
+  updateTotal(premiumPrice, currentPrice3);
+  updateTotal(plusPrice, currentPrice4);
 } // ===========================================================================
 // АДАПТИВ
 

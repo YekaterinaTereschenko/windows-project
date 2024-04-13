@@ -5,6 +5,9 @@ const widthRange = document.getElementById('widthRange');
 const widthValue = document.getElementById('widthValue');
 const heightRange = document.getElementById('heightRange');
 const heightValue = document.getElementById('heightValue');
+let heightDoorRange = document.getElementById('heightDoorRange');
+let heightDoorValue = document.getElementById('heightDoorValue');
+let widthDoorRange = 700
 const totalValue = document.getElementById('totalValue');
 const radioButtons = document.querySelectorAll('input[type="radio"]');
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -28,18 +31,26 @@ const currentPrice4 = 7000
 let totalMeters
 const widthInput = document.getElementById('widthInput');
 const heightInput = document.getElementById('heightInput');
+const heightDoorInput = document.getElementById('heightDoorInput');
+const balconySelectors = document.querySelectorAll('.balcony')
 
 // СУММА
 function updateTotal(text, price) {
     let widthInMeters
     let heightInMeters
+    let heightDoorInMeters
+    let widthDoorInMeters
     if (clientWidth < 769) {
         widthInMeters = widthInput.value / 1000
         heightInMeters = heightInput.value / 1000
+        heightDoorInMeters = heightDoorInput.value / 1000;
+        widthDoorInMeters = widthDoorRange / 1000;
     }
     else {
         widthInMeters = widthRange.value / 1000;
         heightInMeters = heightRange.value / 1000;
+        heightDoorInMeters = heightDoorRange.value / 1000;
+        widthDoorInMeters = widthDoorRange / 1000;
     }
     const selectedLaminathia = laminathiaForm.querySelector('input[name="answer"]:checked');
     const selectedLaminathiaValue = selectedLaminathia ? selectedLaminathia.value : 0;
@@ -52,7 +63,23 @@ function updateTotal(text, price) {
         selectedOptionsTotal += parseInt(checkbox.value);
     });
 
-    let total = widthInMeters * heightInMeters * parseInt(price) + parseInt(selectedLaminathiaValue) + parseInt(selectedInstallationValue) + parseInt(selectedOptionsTotal)
+    let balconySize
+
+    balconySelectors.forEach(balconySelector => {
+        if (balconySelector.style.display == 'none') {
+            balconySize = 0
+        }
+        else {
+            heightDoorInMeters.value = 2000 / 1000
+            widthDoorInMeters = 700 / 1000
+            balconySize = heightDoorInMeters * widthDoorInMeters
+        }
+    })
+
+    const windowSize = widthInMeters * heightInMeters
+    const balconyAndWindowSize = windowSize + balconySize
+
+    let total = balconyAndWindowSize * parseInt(price) + parseInt(selectedLaminathiaValue) + parseInt(selectedInstallationValue) + parseInt(selectedOptionsTotal)
     text.textContent = Math.round(total) + ' ₽';
 }
 
@@ -100,6 +127,29 @@ heightRange.addEventListener('input', () => {
 heightInput.addEventListener('input', function () {
     const heightInMeters = heightRange.value / 1000;
     heightValue.textContent = heightRange.value;
+    const widthInMeters = widthRange.value / 1000;
+    totalMeters = heightInMeters * widthInMeters
+    updateTotal(standartPrice, currentPrice1)
+    updateTotal(comfortPrice, currentPrice2)
+    updateTotal(premiumPrice, currentPrice3)
+    updateTotal(plusPrice, currentPrice4)
+});
+
+// ВЫСОТА ДВЕРИ
+heightDoorRange.addEventListener('input', () => {
+    const heightInMeters = heightDoorRange.value / 1000;
+    heightDoorValue.textContent = heightDoorRange.value;
+    const widthInMeters = widthRange.value / 1000;
+    totalMeters = heightInMeters * widthInMeters
+    updateTotal(standartPrice, currentPrice1)
+    updateTotal(comfortPrice, currentPrice2)
+    updateTotal(premiumPrice, currentPrice3)
+    updateTotal(plusPrice, currentPrice4)
+});
+
+heightDoorInput.addEventListener('input', function () {
+    const heightInMeters = heightDoorRange.value / 1000;
+    heightDoorValue.textContent = heightDoorRange.value;
     const widthInMeters = widthRange.value / 1000;
     totalMeters = heightInMeters * widthInMeters
     updateTotal(standartPrice, currentPrice1)
@@ -162,6 +212,25 @@ function toggleButton(button) {
 
     button.classList.add('active-btn');
     button.querySelector('p').style.display = 'block';
+    if (button.querySelector('p').textContent == 'Балкон. Двухстворчатое окно' || button.querySelector('p').textContent == 'Балкон. Одностворчатое окно') {
+        balconySelectors.forEach(balconySelector => {
+            balconySelector.style.display = 'flex'
+            heightDoorRange.value = 2000;
+            widthDoorRange = 700
+        })
+    }
+    else {
+        balconySelectors.forEach(balconySelector => {
+            balconySelector.style.display = 'none'
+            heightDoorRange.value = 0
+            heightDoorInput.value = 0
+            widthDoorRange = 0
+        })
+    }
+    updateTotal(standartPrice, currentPrice1)
+    updateTotal(comfortPrice, currentPrice2)
+    updateTotal(premiumPrice, currentPrice3)
+    updateTotal(plusPrice, currentPrice4)
 }
 
 // ===========================================================================

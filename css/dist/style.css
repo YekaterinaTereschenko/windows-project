@@ -180,7 +180,9 @@ body {
   fill: #A0A6AD;
 }
 .container .calc-content .calc-block #widthRange,
-.container .calc-content .calc-block #heightRange {
+.container .calc-content .calc-block #heightRange,
+.container .calc-content .calc-block #widthDoorRange,
+.container .calc-content .calc-block #heightDoorRange {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -192,7 +194,9 @@ body {
   background: transparent;
 }
 .container .calc-content .calc-block #widthRange::-webkit-slider-thumb,
-.container .calc-content .calc-block #heightRange::-webkit-slider-thumb {
+.container .calc-content .calc-block #heightRange::-webkit-slider-thumb,
+.container .calc-content .calc-block #widthDoorRange::-webkit-slider-thumb,
+.container .calc-content .calc-block #heightDoorRange::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   background-color: #ffba80;
@@ -205,7 +209,9 @@ body {
   clip-path: polygon(100% 0, 2px 0, 0 7px, -100vmax 7px, -100vmax 11px, 0 11px, 2px 100%, 100% 100%);
 }
 .container .calc-content .calc-block #widthRange::-moz-range-thumb,
-.container .calc-content .calc-block #heightRange::-moz-range-thumb {
+.container .calc-content .calc-block #heightRange::-moz-range-thumb,
+.container .calc-content .calc-block #widthDoorRange::-moz-range-thumb,
+.container .calc-content .calc-block #heightDoorRange::-moz-range-thumb {
   -moz-appearance: none;
   appearance: none;
   background-color: #ffba80;
@@ -216,7 +222,9 @@ body {
   margin-top: -7px;
 }
 .container .calc-content .calc-block #widthRange::-webkit-slider-runnable-track,
-.container .calc-content .calc-block #heightRange::-webkit-slider-runnable-track {
+.container .calc-content .calc-block #heightRange::-webkit-slider-runnable-track,
+.container .calc-content .calc-block #widthDoorRange::-webkit-slider-runnable-track,
+.container .calc-content .calc-block #heightDoorRange::-webkit-slider-runnable-track {
   height: 4px;
   border-radius: 4px;
   background: white;
@@ -239,6 +247,22 @@ body {
 }
 .container .calc-content .calc-block .form_radio_btn input[type=radio]:disabled + label {
   background: #efefef;
+}
+.container .calc-content .calc-block #widthDoorRange::-webkit-slider-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  border: 0px solid #ffba80;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  margin-top: -7px;
+  background-size: 60% 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../../images/calc/Vector.svg") !important;
+}
+.container .calc-content .calc-block .balcony {
+  display: none;
 }
 .container .calc-content .calc-block .selector {
   display: flex;
@@ -1719,6 +1743,10 @@ body {
   }
   .calc-content .calc-block .head button p {
     display: none !important;
+  }
+  .calc-content .calc-block #widthDoorInput:disabled {
+    background-color: #fafbff;
+    /* Задайте цвет фона, который вы хотите использовать */
   }
   .calc-content .calc-block .selector h5 {
     font-size: 16px !important;

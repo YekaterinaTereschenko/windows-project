@@ -219,7 +219,9 @@ body {
                 }
 
                 #widthRange,
-                #heightRange {
+                #heightRange,
+                #widthDoorRange,
+                #heightDoorRange {
                     -webkit-appearance: none;
                     -moz-appearance: none;
                     appearance: none;
@@ -232,7 +234,9 @@ body {
                 }
 
                 #widthRange::-webkit-slider-thumb,
-                #heightRange::-webkit-slider-thumb {
+                #heightRange::-webkit-slider-thumb,
+                #widthDoorRange::-webkit-slider-thumb,
+                #heightDoorRange::-webkit-slider-thumb {
                     -webkit-appearance: none;
                     appearance: none;
                     background-color: rgba(255, 186, 128, 1);
@@ -253,7 +257,9 @@ body {
                 }
 
                 #widthRange::-moz-range-thumb,
-                #heightRange::-moz-range-thumb {
+                #heightRange::-moz-range-thumb,
+                #widthDoorRange::-moz-range-thumb,
+                #heightDoorRange::-moz-range-thumb {
                     -moz-appearance: none;
                     appearance: none;
                     background-color: rgba(255, 186, 128, 1);
@@ -265,7 +271,9 @@ body {
                 }
 
                 #widthRange::-webkit-slider-runnable-track,
-                #heightRange::-webkit-slider-runnable-track {
+                #heightRange::-webkit-slider-runnable-track,
+                #widthDoorRange::-webkit-slider-runnable-track,
+                #heightDoorRange::-webkit-slider-runnable-track {
                     height: 4px;
                     border-radius: 4px;
                     background: rgba(255, 255, 255, 1);
@@ -293,6 +301,24 @@ body {
 
                 .form_radio_btn input[type=radio]:disabled+label {
                     background: #efefef;
+                }
+
+                #widthDoorRange::-webkit-slider-thumb {
+                    -moz-appearance: none;
+                    appearance: none;
+                    border: 0px solid rgba(255, 186, 128, 1);
+                    border-radius: 50%;
+                    height: 18px;
+                    width: 18px;
+                    margin-top: -7px;
+                    background-size: 60% 60%;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-image: url('../../images/calc/Vector.svg') !important;
+                }
+
+                .balcony {
+                    display: none;
                 }
 
                 .selector {
@@ -1574,6 +1600,7 @@ body {
             margin: 0 auto;
 
         }
+
         h3 {
             line-height: 26px !important;
         }
@@ -2079,6 +2106,10 @@ body {
                             display: none !important;
                         }
                     }
+                }
+
+                #widthDoorInput:disabled {
+                    background-color: #fafbff; /* Задайте цвет фона, который вы хотите использовать */
                 }
 
                 .selector {
