@@ -559,6 +559,7 @@ body {
 .container .sales .banners-bottom {
   display: flex;
   gap: 20px;
+  padding-top: 20px;
 }
 .container .sales .banners-bottom-block {
   display: flex;
@@ -667,10 +668,11 @@ body {
   color: black;
 }
 .container .options-card h5 {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 24px;
   text-transform: uppercase;
+  text-align: center;
 }
 .container .options .mySwiper2 {
   display: flex;
@@ -761,6 +763,10 @@ body {
   text-align: center;
   color: white;
   background-color: #ffa85e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 .container .help-card .input-block {
   display: flex;
@@ -1820,6 +1826,9 @@ body {
   .sales {
     padding: 100px 0 !important;
   }
+  .sales h3 {
+    margin-bottom: 20px !important;
+  }
   .sales-head a {
     display: none !important;
   }
@@ -1837,6 +1846,7 @@ body {
   .sales .banners-bottom {
     flex-direction: column;
     padding-top: 10px !important;
+    gap: 10px !important;
   }
   .sales .banners-bottom-block {
     width: 100% !important;

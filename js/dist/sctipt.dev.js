@@ -93,6 +93,12 @@ if (orderInput2) {
       orderBtn2.style.background = 'rgba(160, 166, 173, 1)';
     } else {
       orderBtn2.style.background = 'rgba(44, 177, 185, 1)';
+      orderBtn2.addEventListener('click', function () {
+        console.log('aaaaaaa');
+        modal.style.display = "flex";
+        modalBlock.style.display = 'none';
+        modalBlockHide.style.display = 'flex';
+      });
     }
   });
 }
@@ -103,6 +109,12 @@ if (orderInput3) {
       orderBtn3.style.background = 'rgba(160, 166, 173, 1)';
     } else {
       orderBtn3.style.background = 'rgba(44, 177, 185, 1)';
+      orderBtn3.addEventListener('click', function () {
+        console.log('aaaaaaa');
+        modal.style.display = "flex";
+        modalBlock.style.display = 'none';
+        modalBlockHide.style.display = 'flex';
+      });
     }
   });
 }
